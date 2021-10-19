@@ -83,8 +83,8 @@ class _myaccountState extends State<myaccount> {
                       "Sign out",
                       style: TextStyle(
                         color: Colors.orange,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14,
                       ),
                     );
                   },
@@ -118,7 +118,10 @@ class _myaccountState extends State<myaccount> {
                   child: Text(
                     "My Messages",
                     style: TextStyle(
-                        fontSize: 18, color: Colors.black.withOpacity(0.70)),
+                      fontSize: 14,
+                      color: Colors.black.withOpacity(0.70),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 const Icon(
@@ -155,7 +158,10 @@ class _myaccountState extends State<myaccount> {
                   child: Text(
                     "My Returns",
                     style: TextStyle(
-                        fontSize: 18, color: Colors.black.withOpacity(0.70)),
+                      fontSize: 14,
+                      color: Colors.black.withOpacity(0.70),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 const Icon(
@@ -192,7 +198,10 @@ class _myaccountState extends State<myaccount> {
                   child: Text(
                     "My Credit Cards",
                     style: TextStyle(
-                        fontSize: 18, color: Colors.black.withOpacity(0.70)),
+                      fontSize: 14,
+                      color: Colors.black.withOpacity(0.70),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 const Icon(
@@ -229,7 +238,10 @@ class _myaccountState extends State<myaccount> {
                   child: Text(
                     "My Address",
                     style: TextStyle(
-                        fontSize: 18, color: Colors.black.withOpacity(0.70)),
+                      fontSize: 14,
+                      color: Colors.black.withOpacity(0.70),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 const Icon(
@@ -266,7 +278,10 @@ class _myaccountState extends State<myaccount> {
                   child: Text(
                     "My information",
                     style: TextStyle(
-                        fontSize: 18, color: Colors.black.withOpacity(0.70)),
+                      fontSize: 14,
+                      color: Colors.black.withOpacity(0.70),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 const Icon(
@@ -303,7 +318,10 @@ class _myaccountState extends State<myaccount> {
                   child: Text(
                     "My Order",
                     style: TextStyle(
-                        fontSize: 18, color: Colors.black.withOpacity(0.70)),
+                      fontSize: 14,
+                      color: Colors.black.withOpacity(0.70),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
                 const Icon(
@@ -321,7 +339,7 @@ class _myaccountState extends State<myaccount> {
 
   AppBar buildAppBar() {
     return AppBar(
-      toolbarHeight: 75,
+      centerTitle: true,
       title: const Center(
           child: Text(
         "My Account",

@@ -88,7 +88,8 @@ class _myorderState extends State<myorder> {
                             style: TextStyle(
                               color: Colors.orange,
                               fontWeight: FontWeight.bold,
-                              fontSize: 18,
+                              fontSize: 16,
+                              fontFamily: 'Poppins',
                             ),
                           );
                         }),
@@ -102,7 +103,13 @@ class _myorderState extends State<myorder> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Builder(builder: (context) {
-                            return const Text("Status", style: kBlackNormal);
+                            return const Text(
+                              "Status",
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontFamily: 'Poppins',
+                              ),
+                            );
                           }),
                           const SizedBox(
                             height: 3,
@@ -124,15 +131,27 @@ class _myorderState extends State<myorder> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Builder(builder: (context) {
-                            return const Text("Delivery Adress",
-                                style: TextStyle(fontSize: 15));
+                            return const Text(
+                              "Delivery Adress",
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            );
                           }),
                           const SizedBox(
                             height: 3,
                           ),
-                          const Text("Home",
-                              style: TextStyle(
-                                  color: Colors.orange, fontSize: 18)),
+                          const Text(
+                            "Home",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              color: Colors.amber,
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -141,15 +160,25 @@ class _myorderState extends State<myorder> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Builder(builder: (context) {
-                            return const Text("Total Price",
-                                style: TextStyle(fontSize: 15));
+                            return const Text(
+                              "Total Price",
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            );
                           }),
                           const SizedBox(
                             height: 3,
                           ),
                           const Text(
                             "\$2050",
-                            style: TextStyle(color: Colors.black, fontSize: 18),
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                            ),
                           ),
                         ],
                       ),
@@ -159,16 +188,26 @@ class _myorderState extends State<myorder> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Builder(builder: (context) {
-                            return const Text("Order Date",
-                                style: TextStyle(fontSize: 15));
+                            return const Text(
+                              "Order Date",
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                              ),
+                            );
                           }),
                           const SizedBox(
                             height: 3,
                           ),
                           const Text(
                             "12 Feb 2021",
-                            style:
-                                TextStyle(color: Colors.orange, fontSize: 18),
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontFamily: 'Poppins',
+                              fontWeight: FontWeight.w600,
+                              color: Colors.orange,
+                            ),
                           ),
                         ],
                       ),
@@ -190,7 +229,11 @@ class _myorderState extends State<myorder> {
         alignment: Alignment.topLeft,
         child: Text(
           "My Order",
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+            fontFamily: 'Poppins',
+          ),
         ),
       ),
     );

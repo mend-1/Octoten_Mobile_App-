@@ -13,17 +13,11 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.orange),
-        home: MainPage(title: title),
+        home: MainPage(),
       );
 }
 
 class MainPage extends StatefulWidget {
-  final String title;
-
-  const MainPage({
-    required this.title,
-  });
-
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -74,8 +68,8 @@ class _MainPageState extends State<MainPage> {
                     "Apply",
                     style: TextStyle(
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14,
                     ),
                   );
                 }),
@@ -98,7 +92,9 @@ class _MainPageState extends State<MainPage> {
             size: 30,
           ),
           color: Colors.black,
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
       ),
       title: const Center(
@@ -150,7 +146,7 @@ class _MainPageState extends State<MainPage> {
         ),
         title: Text(
           notification.title,
-          style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          style: kBlackNormal,
         ),
       );
 }

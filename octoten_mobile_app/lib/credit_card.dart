@@ -60,13 +60,18 @@ class _creditcardState extends State<creditcard> {
             children: [
               const Text(
                 "Credit Card",
-                style: kBlackBold,
+                style: TextStyle(
+                  fontFamily: 'Poppins',
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                ),
               ),
               GestureDetector(
                 onTap: () {},
                 child: const Text(
                   "+ Add New Card",
-                  style: kRedBold,
+                  style: kRedNormal,
                 ),
               ),
             ],
@@ -86,7 +91,7 @@ class _creditcardState extends State<creditcard> {
             },
             title: const Text(
               "5406**** **** 3333",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style: kBlackBold,
             ),
             subtitle: const Text(
               "Garanti Bankası - Bonus",
@@ -96,7 +101,11 @@ class _creditcardState extends State<creditcard> {
               onTap: () {},
               child: const Text(
                 "Change",
-                style: TextStyle(color: Colors.orangeAccent, fontSize: 16),
+                style: TextStyle(
+                  color: Colors.orangeAccent,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),
@@ -115,7 +124,7 @@ class _creditcardState extends State<creditcard> {
             },
             title: const Text(
               "5406**** **** 3333",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              style: kBlackBold,
             ),
             subtitle: const Text(
               "Garanti Bankası - Bonus",
@@ -125,7 +134,11 @@ class _creditcardState extends State<creditcard> {
               onTap: () {},
               child: const Text(
                 "Change",
-                style: TextStyle(color: Colors.orangeAccent, fontSize: 16),
+                style: TextStyle(
+                  color: Colors.orangeAccent,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),

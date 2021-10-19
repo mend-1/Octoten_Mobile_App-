@@ -14,22 +14,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.orange),
-        home: MainPage(title: title),
+        home: filter(),
       );
 }
 
-class MainPage extends StatefulWidget {
-  final String title;
-
-  const MainPage({
-    required this.title,
-  });
-
+class filter extends StatefulWidget {
   @override
-  _MainPageState createState() => _MainPageState();
+  _filterState createState() => _filterState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _filterState extends State<filter> {
   final notifications = [
     NotificationSetting(title: 'Book'),
     NotificationSetting(title: 'Electronic'),
@@ -82,8 +76,8 @@ class _MainPageState extends State<MainPage> {
                     "Apply",
                     style: TextStyle(
                       color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 14,
                     ),
                   );
                 }),
@@ -99,7 +93,10 @@ class _MainPageState extends State<MainPage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ExpansionTile(
-        title: const Text("Price"),
+        title: const Text(
+          "Price",
+          style: kBlackBold,
+        ),
         collapsedIconColor: Colors.black,
         leading: const Icon(Icons.arrow_drop_up_outlined),
         children: [
@@ -116,7 +113,8 @@ class _MainPageState extends State<MainPage> {
                       child: TextField(
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: "\$  Min. Price",
+                          hintText: "\$"
+                              "  Min. Price",
                         ),
                       ),
                     ),
@@ -147,7 +145,10 @@ class _MainPageState extends State<MainPage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ExpansionTile(
-        title: const Text("Brand"),
+        title: const Text(
+          "Brand",
+          style: kBlackBold,
+        ),
         collapsedIconColor: Colors.black,
         children: [
           SizedBox(
@@ -182,7 +183,10 @@ class _MainPageState extends State<MainPage> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: ExpansionTile(
-        title: const Text("Category"),
+        title: const Text(
+          "Category",
+          style: kBlackBold,
+        ),
         collapsedIconColor: Colors.black,
         children: [
           SizedBox(
@@ -215,6 +219,7 @@ class _MainPageState extends State<MainPage> {
 
   AppBar appbarbuild() {
     return AppBar(
+      automaticallyImplyLeading: false,
       toolbarHeight: 75,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -225,7 +230,9 @@ class _MainPageState extends State<MainPage> {
               size: 30,
             ),
             color: Colors.black,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
           const Text(
             "Filter",
@@ -234,10 +241,14 @@ class _MainPageState extends State<MainPage> {
           GestureDetector(
             onTap: () {},
             child: const Padding(
-              padding: EdgeInsets.only(right: 0, top: 8.0),
+              padding: EdgeInsets.only(right: 0, top: 5.0),
               child: Text(
                 "Reset",
-                style: TextStyle(color: Colors.red, fontSize: 18),
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ),
@@ -282,7 +293,12 @@ class _MainPageState extends State<MainPage> {
         ),
         title: Text(
           notification.title,
-          style: kBlackNormal,
+          style: const TextStyle(
+            fontFamily: 'Poppins',
+            color: Colors.black,
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+          ),
         ),
       );
 }
