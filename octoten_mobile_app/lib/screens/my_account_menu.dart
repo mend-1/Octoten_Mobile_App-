@@ -1,73 +1,58 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
+import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
 
-import 'constants.dart';
 import 'detail.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyAccount extends StatefulWidget {
+  const MyAccount({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _MyAccountState createState() => _MyAccountState();
 }
 
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: myaccount(),
-    );
-  }
-}
-
-class myaccount extends StatefulWidget {
-  const myaccount({Key? key}) : super(key: key);
-
-  @override
-  _myaccountState createState() => _myaccountState();
-}
-
-class _myaccountState extends State<myaccount> {
+class _MyAccountState extends State<MyAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(),
-      body: SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                buildPaddingMyOrder(context),
-                buildPaddingMyInformation(context),
-                buildPaddingMyAdress(context),
-                buildPaddingMyCreditCards(context),
-                buildPaddingMyReturns(context),
-                buildPaddingMyMessages(context),
-                const SizedBox(
-                  height: 10,
-                ),
-                buildPaddingSignOutButton(),
-              ],
-            )
-          ],
-        ),
+      appBar: CustomAppBar(
+        customTitle: 'My Account',
+      ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+            vertical: context.dynamicHeight(0.01),
+            horizontal: context.dynamicWidth(0.01)),
+        children: [
+          Column(
+            children: [
+              buildPaddingMyOrder(context),
+              buildPaddingMyInformation(context),
+              buildPaddingMyAdress(context),
+              buildPaddingMyCreditCards(context),
+              buildPaddingMyReturns(context),
+              buildPaddingMyMessages(context),
+              SizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              Button(),
+            ],
+          )
+        ],
       ),
     );
   }
 
-  Padding buildPaddingSignOutButton() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15),
-      child: Align(
-        alignment: Alignment.bottomLeft,
+  Align Button() {
+    return Align(
+      alignment: Alignment.bottomLeft,
+      child: Padding(
+        padding: EdgeInsets.all(
+          context.dynamicHeight(0.01),
+        ),
         child: SizedBox(
-          height: 40,
-          width: 150,
+          height: context.dynamicHeight(0.06),
+          width: context.dynamicWidth(0.3),
           child: RaisedButton(
             onPressed: () {},
             shape: RoundedRectangleBorder(
@@ -99,22 +84,23 @@ class _myaccountState extends State<myaccount> {
 
   Padding buildPaddingMyMessages(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 3.0, right: 3.0),
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
       child: SizedBox(
-        //the height of my order
-        height: 60,
+        height: context.dynamicHeight(0.08),
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Detay()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Detay()));
           },
           child: Container(
-            color: Colors.white,
+            color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                   child: Text(
                     "My Messages",
                     style: TextStyle(
@@ -139,22 +125,23 @@ class _myaccountState extends State<myaccount> {
 
   Padding buildPaddingMyReturns(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 3.0, right: 3.0),
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
       child: SizedBox(
-        //the height of my order
-        height: 60,
+        height: context.dynamicHeight(0.08),
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Detay()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Detay()));
           },
           child: Container(
-            color: Colors.white,
+            color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                   child: Text(
                     "My Returns",
                     style: TextStyle(
@@ -179,22 +166,24 @@ class _myaccountState extends State<myaccount> {
 
   Padding buildPaddingMyCreditCards(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 3.0, right: 3.0),
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
       child: SizedBox(
         //the height of my order
-        height: 60,
+        height: context.dynamicHeight(0.08),
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Detay()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Detay()));
           },
           child: Container(
-            color: Colors.white,
+            color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                   child: Text(
                     "My Credit Cards",
                     style: TextStyle(
@@ -219,22 +208,24 @@ class _myaccountState extends State<myaccount> {
 
   Padding buildPaddingMyAdress(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 3.0, right: 3.0),
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
       child: SizedBox(
         //the height of my order
-        height: 60,
+        height: context.dynamicHeight(0.08),
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Detay()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Detay()));
           },
           child: Container(
-            color: Colors.white,
+            color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                   child: Text(
                     "My Address",
                     style: TextStyle(
@@ -259,22 +250,24 @@ class _myaccountState extends State<myaccount> {
 
   Padding buildPaddingMyInformation(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 3.0, right: 3.0),
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
       child: SizedBox(
         //the height of my order
-        height: 60,
+        height: context.dynamicHeight(0.08),
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Detay()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Detay()));
           },
           child: Container(
-            color: Colors.white,
+            color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                   child: Text(
                     "My information",
                     style: TextStyle(
@@ -299,22 +292,23 @@ class _myaccountState extends State<myaccount> {
 
   Padding buildPaddingMyOrder(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 3.0, right: 3.0),
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
       child: SizedBox(
-        //the height of my order
-        height: 60,
+        height: context.dynamicHeight(0.08),
         child: GestureDetector(
           onTap: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (context) => Detay()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const Detay()));
           },
           child: Container(
-            color: Colors.white,
+            color: Colors.transparent,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: EdgeInsets.all(context.dynamicHeight(0.02)),
                   child: Text(
                     "My Order",
                     style: TextStyle(
@@ -334,19 +328,6 @@ class _myaccountState extends State<myaccount> {
           ),
         ),
       ),
-    );
-  }
-
-  AppBar buildAppBar() {
-    return AppBar(
-      centerTitle: true,
-      title: const Center(
-          child: Text(
-        "My Account",
-        style: kBlackBold,
-      )),
-      backgroundColor: Colors.white,
-      elevation: 7,
     );
   }
 }

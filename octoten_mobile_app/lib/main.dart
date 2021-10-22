@@ -1,14 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:octoten_mobile_app/filter.dart';
-import 'package:octoten_mobile_app/my_account_menu.dart';
-import 'package:octoten_mobile_app/my_order.dart';
-import 'package:octoten_mobile_app/review.dart';
-import 'package:octoten_mobile_app/sory_by.dart';
-
-import 'constants.dart';
-import 'credit_card.dart';
+import 'package:octoten_mobile_app/screens/credit_card.dart';
+import 'package:octoten_mobile_app/screens/filter.dart';
+import 'package:octoten_mobile_app/screens/my_account_menu.dart';
+import 'package:octoten_mobile_app/screens/my_order.dart';
+import 'package:octoten_mobile_app/screens/review.dart';
+import 'package:octoten_mobile_app/screens/sory_by.dart';
+import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,59 +26,57 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.orange),
-      home: mains(),
+      home: const Mains(),
     );
   }
 }
 
-class mains extends StatefulWidget {
-  const mains({Key? key}) : super(key: key);
+class Mains extends StatefulWidget {
+  const Mains({Key? key}) : super(key: key);
 
   @override
-  _mainsState createState() => _mainsState();
+  _MainsState createState() => _MainsState();
 }
 
-class _mainsState extends State<mains> {
+class _MainsState extends State<Mains> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      body: SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                const SizedBox(
-                  height: 50,
-                ),
-                buildPaddingButton(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildPaddingButton1(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildPaddingButton2(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildPaddingButton3(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildPaddingButton4(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildPaddingButton5(context),
-                const SizedBox(
-                  height: 20,
-                ),
-              ],
-            ),
-          ],
-        ),
+      appBar: CustomAppBar(customTitle: "Pages"),
+      body: ListView(
+        children: [
+          Column(
+            children: [
+              const SizedBox(
+                height: 50,
+              ),
+              buildPaddingButton(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton1(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton2(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton3(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton4(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton5(context),
+              const SizedBox(
+                height: 20,
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -95,7 +92,7 @@ class _mainsState extends State<mains> {
           child: RaisedButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const creditcard()));
+                  MaterialPageRoute(builder: (context) => const CreditCard()));
             },
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -133,7 +130,7 @@ class _mainsState extends State<mains> {
           child: RaisedButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => filter()));
+                  context, MaterialPageRoute(builder: (context) => Filter()));
             },
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -171,7 +168,7 @@ class _mainsState extends State<mains> {
           child: RaisedButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const myaccount()));
+                  MaterialPageRoute(builder: (context) => const MyAccount()));
             },
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -209,7 +206,7 @@ class _mainsState extends State<mains> {
           child: RaisedButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const myorder()));
+                  MaterialPageRoute(builder: (context) => const MyOrder()));
             },
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -247,7 +244,7 @@ class _mainsState extends State<mains> {
           child: RaisedButton(
             onPressed: () {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const review()));
+                  MaterialPageRoute(builder: (context) => const Review()));
             },
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -285,7 +282,7 @@ class _mainsState extends State<mains> {
           child: RaisedButton(
             onPressed: () {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MainPage()));
+                  context, MaterialPageRoute(builder: (context) => SoryBy()));
             },
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
@@ -309,36 +306,6 @@ class _mainsState extends State<mains> {
           ),
         ),
       ),
-    );
-  }
-
-  AppBar buildAppBar(BuildContext context) {
-    return AppBar(
-      toolbarHeight: 75,
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 15),
-        child: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            size: 25,
-          ),
-          color: Colors.black,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      title: const Center(
-        child: Padding(
-          padding: EdgeInsets.only(right: 70),
-          child: Text(
-            "Pages",
-            style: kBlackBold,
-          ),
-        ),
-      ),
-      backgroundColor: Colors.white,
-      elevation: 7,
     );
   }
 }

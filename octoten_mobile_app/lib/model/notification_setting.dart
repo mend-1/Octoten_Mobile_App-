@@ -1,4 +1,5 @@
 // TODO Implement this library.
+
 class NotificationSetting {
   String title;
   bool value;

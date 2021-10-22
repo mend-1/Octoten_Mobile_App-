@@ -1,59 +1,43 @@
 import 'package:flutter/material.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/model/notification_setting.dart';
+import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
 
-import 'constants.dart';
+import '../model/constants.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  final String title = 'Sory By';
-
+class SoryBy extends StatefulWidget {
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: title,
-        theme: ThemeData(primarySwatch: Colors.orange),
-        home: MainPage(),
-      );
+  _SoryByState createState() => _SoryByState();
 }
 
-class MainPage extends StatefulWidget {
-  @override
-  _MainPageState createState() => _MainPageState();
-}
-
-class _MainPageState extends State<MainPage> {
-  final notifications = [
-    NotificationSetting(title: 'Name'),
-    NotificationSetting(title: 'Lowest Price'),
-    NotificationSetting(title: 'Highest Price'),
-    NotificationSetting(title: 'New'),
-  ];
-
+class _SoryByState extends State<SoryBy> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: buildAppBar(),
-        body: SafeArea(
-          child: ListView(
-            children: [
-              ...notifications.map(buildSingleCheckbox).toList(),
-              const SizedBox(
-                height: 30,
-              ),
-              buildPaddingButton(),
-            ],
-          ),
+        appBar: CustomCloseAppBar(
+          customTitle: 'Sory By',
+        ),
+        body: ListView(
+          padding: EdgeInsets.symmetric(
+              vertical: context.dynamicHeight(0.02),
+              horizontal: context.dynamicWidth(0.02)),
+          children: [
+            ...notifications.map(buildSingleCheckbox).toList(),
+            SizedBox(
+              height: context.dynamicHeight(0.01),
+            ),
+            buildPaddingButton(),
+          ],
         ),
       );
 
   Padding buildPaddingButton() {
     return Padding(
-      padding: const EdgeInsets.only(left: 15),
+      padding: EdgeInsets.all(context.dynamicHeight(0.01)),
       child: Align(
         alignment: Alignment.center,
         child: SizedBox(
-          height: 40,
-          width: 250,
+          height: context.dynamicHeight(0.06),
+          width: context.dynamicWidth(0.50),
           child: RaisedButton(
             onPressed: () {},
             shape: RoundedRectangleBorder(
@@ -81,36 +65,12 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  AppBar buildAppBar() {
-    return AppBar(
-      toolbarHeight: 75,
-      leading: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: IconButton(
-          icon: const Icon(
-            Icons.close,
-            size: 30,
-          ),
-          color: Colors.black,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      title: const Center(
-        child: Padding(
-          padding: EdgeInsets.only(right: 100, top: 8),
-          child: Text(
-            "Sory By",
-            style: kBlackBold,
-          ),
-        ),
-      ),
-      backgroundColor: Colors.white,
-      elevation: 7,
-      //title: Text(widget.title),
-    );
-  }
+  final notifications = [
+    NotificationSetting(title: 'Name'),
+    NotificationSetting(title: 'Lowest Price'),
+    NotificationSetting(title: 'Highest Price'),
+    NotificationSetting(title: 'New'),
+  ];
 
   Widget buildToggleCheckbox(NotificationSetting notification) => buildCheckbox(
       notification: notification,

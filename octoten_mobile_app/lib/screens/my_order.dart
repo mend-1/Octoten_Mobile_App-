@@ -1,57 +1,39 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
+import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
 
-import 'constants.dart';
+import '../model/constants.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyOrder extends StatefulWidget {
+  const MyOrder({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _MyOrderState createState() => _MyOrderState();
 }
 
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: myorder(),
-    );
-  }
-}
-
-class myorder extends StatefulWidget {
-  const myorder({Key? key}) : super(key: key);
-
-  @override
-  _myorderState createState() => _myorderState();
-}
-
-class _myorderState extends State<myorder> {
+class _MyOrderState extends State<MyOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      body: SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                buildPaddingText(),
-                buildGestureDetector(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildGestureDetector(context),
-              ],
-            ),
-          ],
-        ),
+      appBar: CustomAppBar(customTitle: "My Order"),
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+            vertical: context.dynamicHeight(0.02),
+            horizontal: context.dynamicWidth(0.02)),
+        children: [
+          Column(
+            children: [
+              buildPaddingText(),
+              buildGestureDetector(context),
+              SizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              buildGestureDetector(context),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -60,22 +42,28 @@ class _myorderState extends State<myorder> {
     return GestureDetector(
       onTap: () {},
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(
+          context.dynamicHeight(0.01),
+        ),
         child: Material(
           borderRadius: BorderRadius.circular(5),
           elevation: 2,
           child: Container(
-            height: 160,
+            height: context.dynamicHeight(0.3), //height container
             width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(
+              context.dynamicHeight(0.02),
+            ),
             child: Column(
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
+                      // height: context.dynamicHeight(0.08),
+                      // width: context.dynamicHeight(0.35),
                       height: 40,
-                      width: 200,
+                      width: 180,
                       child: RaisedButton(
                         onPressed: () {},
                         shape: RoundedRectangleBorder(
@@ -95,9 +83,6 @@ class _myorderState extends State<myorder> {
                         }),
                       ),
                     ),
-                    const SizedBox(
-                      width: 25,
-                    ),
                     Align(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,8 +96,8 @@ class _myorderState extends State<myorder> {
                               ),
                             );
                           }),
-                          const SizedBox(
-                            height: 3,
+                          SizedBox(
+                            height: context.dynamicHeight(0.005),
                           ),
                           const Text("Order Completed", style: kRedBold),
                         ],
@@ -120,8 +105,8 @@ class _myorderState extends State<myorder> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 40,
+                SizedBox(
+                  height: context.dynamicHeight(0.08),
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,8 +125,8 @@ class _myorderState extends State<myorder> {
                               ),
                             );
                           }),
-                          const SizedBox(
-                            height: 3,
+                          SizedBox(
+                            height: context.dynamicHeight(0.005),
                           ),
                           const Text(
                             "Home",
@@ -169,8 +154,8 @@ class _myorderState extends State<myorder> {
                               ),
                             );
                           }),
-                          const SizedBox(
-                            height: 3,
+                          SizedBox(
+                            height: context.dynamicHeight(0.005),
                           ),
                           const Text(
                             "\$2050",
@@ -197,8 +182,8 @@ class _myorderState extends State<myorder> {
                               ),
                             );
                           }),
-                          const SizedBox(
-                            height: 3,
+                          SizedBox(
+                            height: context.dynamicHeight(0.005),
                           ),
                           const Text(
                             "12 Feb 2021",
@@ -223,9 +208,11 @@ class _myorderState extends State<myorder> {
   }
 
   Padding buildPaddingText() {
-    return const Padding(
-      padding: EdgeInsets.all(16.0),
-      child: Align(
+    return Padding(
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.02),
+      ),
+      child: const Align(
         alignment: Alignment.topLeft,
         child: Text(
           "My Order",
@@ -236,36 +223,6 @@ class _myorderState extends State<myorder> {
           ),
         ),
       ),
-    );
-  }
-
-  AppBar buildAppBar(BuildContext context) {
-    return AppBar(
-      toolbarHeight: 75,
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 15),
-        child: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            size: 25,
-          ),
-          color: Colors.black,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      title: const Center(
-        child: Padding(
-          padding: EdgeInsets.only(right: 70),
-          child: Text(
-            "My Order",
-            style: kBlackBold,
-          ),
-        ),
-      ),
-      backgroundColor: Colors.white,
-      elevation: 7,
     );
   }
 }

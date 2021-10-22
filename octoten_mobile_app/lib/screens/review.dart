@@ -1,56 +1,40 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
+import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
 
-import 'constants.dart';
+import '../model/constants.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+class Review extends StatefulWidget {
+  const Review({Key? key}) : super(key: key);
 
   @override
-  _MyAppState createState() => _MyAppState();
+  _ReviewState createState() => _ReviewState();
 }
 
-class _MyAppState extends State<MyApp> {
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: review(),
-    );
-  }
-}
-
-class review extends StatefulWidget {
-  const review({Key? key}) : super(key: key);
-
-  @override
-  _reviewState createState() => _reviewState();
-}
-
-class _reviewState extends State<review> {
+class _ReviewState extends State<Review> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context),
-      body: SafeArea(
-        child: ListView(
-          children: [
-            Column(
-              children: [
-                buildGestureDetector(context),
-                const SizedBox(
-                  height: 20,
-                ),
-                buildGestureDetector(context),
-              ],
-            ),
-          ],
-        ),
+      appBar: CustomAppBar(
+        customTitle: 'Review',
+      ),
+      body: ListView(
+        padding: EdgeInsets.symmetric(
+            vertical: context.dynamicHeight(0.01),
+            horizontal: context.dynamicWidth(0.01)),
+        children: [
+          Column(
+            children: [
+              buildGestureDetector(context),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              buildGestureDetector(context),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -59,13 +43,17 @@ class _reviewState extends State<review> {
     return GestureDetector(
       onTap: () {},
       child: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(
+          context.dynamicHeight(0.01),
+        ),
         child: Material(
           elevation: 2,
           child: Container(
-            height: 420,
+            height: context.dynamicHeight(0.7),
             width: MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.all(16.0),
+            padding: EdgeInsets.all(
+              context.dynamicHeight(0.02),
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -82,22 +70,22 @@ class _reviewState extends State<review> {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      width: 30,
+                    SizedBox(
+                      width: context.dynamicWidth(0.15),
                     ),
                     const Align(
                       child: Text("Canon Camera", style: kBlackNormal),
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
                 ),
-                const Divider(
-                  height: 20,
+                Divider(
+                  height: context.dynamicHeight(0.01),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
                 ),
                 Row(
                   children: [
@@ -123,12 +111,12 @@ class _reviewState extends State<review> {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
                 ),
                 const Text("Lorem Ipsum Dolar!", style: kBlackBold),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
                 ),
                 const Text(
                     "Lorem ipsum dolor sit amet, consectetur\n"
@@ -137,20 +125,20 @@ class _reviewState extends State<review> {
                     " Consequat, dolor mi varius sit. Semper nis\n"
                     " lpharetra, proin sit non aenean purus",
                     style: kBlackNormal),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: context.dynamicHeight(0.03),
                 ),
                 GestureDetector(
                     onTap: () {},
                     child: const Text("Show Detail!", style: kRedNormal)),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: context.dynamicHeight(0.02),
                 ),
-                const Divider(
-                  height: 20,
+                Divider(
+                  height: context.dynamicHeight(0.02),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
                 ),
                 const Text("Status", style: kBlackNormal),
                 const Text("Under Review", style: kRedBold),
@@ -159,36 +147,6 @@ class _reviewState extends State<review> {
           ),
         ),
       ),
-    );
-  }
-
-  AppBar buildAppBar(BuildContext context) {
-    return AppBar(
-      toolbarHeight: 75,
-      leading: Padding(
-        padding: const EdgeInsets.only(left: 15),
-        child: IconButton(
-          icon: const Icon(
-            Icons.arrow_back_ios,
-            size: 25,
-          ),
-          color: Colors.black,
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
-      title: const Center(
-        child: Padding(
-          padding: EdgeInsets.only(right: 70),
-          child: Text(
-            "Review",
-            style: kBlackBold,
-          ),
-        ),
-      ),
-      backgroundColor: Colors.white,
-      elevation: 7,
     );
   }
 }
