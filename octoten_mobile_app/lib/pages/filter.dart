@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/model/notification_setting.dart';
-import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
 
 import '../model/constants.dart';
 
@@ -19,7 +19,7 @@ class _FilterState extends State<Filter> {
         body: ListView(
           padding: EdgeInsets.symmetric(
               vertical: context.dynamicHeight(0.01),
-              horizontal: context.dynamicWidth(0.01)),
+              horizontal: context.dynamicWidth(0.02)),
           children: [
             paddingcategory(),
             buildPaddingbrand(),
@@ -34,9 +34,7 @@ class _FilterState extends State<Filter> {
 
   Padding paddingcategory() {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: context.dynamicWidth(0.02),
-      ),
+      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
       child: ExpansionTile(
         title: const Text(
           "Category",
@@ -74,9 +72,7 @@ class _FilterState extends State<Filter> {
 
   Padding buildPaddingbrand() {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: context.dynamicWidth(0.02),
-      ),
+      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
       child: ExpansionTile(
         title: const Text(
           "Brand",
@@ -114,9 +110,7 @@ class _FilterState extends State<Filter> {
 
   Padding buildPaddingprice() {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: context.dynamicWidth(0.02),
-      ),
+      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
       child: ExpansionTile(
         title: const Text(
           "Price",
@@ -172,9 +166,7 @@ class _FilterState extends State<Filter> {
 
   Padding buildPaddingButton() {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        horizontal: context.dynamicWidth(0.02),
-      ),
+      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
       child: Align(
         alignment: Alignment.center,
         child: SizedBox(

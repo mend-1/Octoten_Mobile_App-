@@ -43,3 +43,10 @@ const TextStyle kWhiteBold = TextStyle(
   fontWeight: FontWeight.w600,
   fontSize: 14,
 );
+
+const TextStyle kyellowBold = TextStyle(
+  fontFamily: 'Poppins',
+  color: Color(0xFFFA931A),
+  fontWeight: FontWeight.w600,
+  fontSize: 14,
+);

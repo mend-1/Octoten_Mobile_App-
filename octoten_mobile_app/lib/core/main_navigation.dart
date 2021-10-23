@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:octoten_mobile_app/screens/credit_card.dart';
-import 'package:octoten_mobile_app/screens/filter.dart';
-import 'package:octoten_mobile_app/screens/my_account_menu.dart';
-import 'package:octoten_mobile_app/screens/my_order.dart';
-import 'package:octoten_mobile_app/screens/review.dart';
-import 'package:octoten_mobile_app/screens/sory_by.dart';
+import 'package:octoten_mobile_app/pages/credit_card.dart';
+import 'package:octoten_mobile_app/pages/filter.dart';
+import 'package:octoten_mobile_app/pages/my_account_menu.dart';
+import 'package:octoten_mobile_app/pages/my_order.dart';
+import 'package:octoten_mobile_app/pages/review.dart';
+import 'package:octoten_mobile_app/pages/sory_by.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({this.navigatorKey}) : super(key: navigatorKey);

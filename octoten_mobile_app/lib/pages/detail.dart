@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 
 class Detay extends StatefulWidget {
   const Detay({Key? key}) : super(key: key);

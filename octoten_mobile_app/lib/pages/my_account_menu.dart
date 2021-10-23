@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
-import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 
 import 'detail.dart';
 
@@ -84,8 +84,9 @@ class _MyAccountState extends State<MyAccount> {
 
   Padding buildPaddingMyMessages(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.01),
+      padding: EdgeInsets.only(
+        left: context.dynamicHeight(0.01),
+        right: context.dynamicHeight(0.01),
       ),
       child: SizedBox(
         height: context.dynamicHeight(0.08),
@@ -125,8 +126,9 @@ class _MyAccountState extends State<MyAccount> {
 
   Padding buildPaddingMyReturns(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.01),
+      padding: EdgeInsets.only(
+        left: context.dynamicHeight(0.01),
+        right: context.dynamicHeight(0.01),
       ),
       child: SizedBox(
         height: context.dynamicHeight(0.08),
@@ -166,8 +168,9 @@ class _MyAccountState extends State<MyAccount> {
 
   Padding buildPaddingMyCreditCards(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.01),
+      padding: EdgeInsets.only(
+        left: context.dynamicHeight(0.01),
+        right: context.dynamicHeight(0.01),
       ),
       child: SizedBox(
         //the height of my order
@@ -208,8 +211,9 @@ class _MyAccountState extends State<MyAccount> {
 
   Padding buildPaddingMyAdress(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.01),
+      padding: EdgeInsets.only(
+        left: context.dynamicHeight(0.01),
+        right: context.dynamicHeight(0.01),
       ),
       child: SizedBox(
         //the height of my order
@@ -250,8 +254,9 @@ class _MyAccountState extends State<MyAccount> {
 
   Padding buildPaddingMyInformation(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.01),
+      padding: EdgeInsets.only(
+        left: context.dynamicHeight(0.01),
+        right: context.dynamicHeight(0.01),
       ),
       child: SizedBox(
         //the height of my order
@@ -292,8 +297,9 @@ class _MyAccountState extends State<MyAccount> {
 
   Padding buildPaddingMyOrder(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.01),
+      padding: EdgeInsets.only(
+        left: context.dynamicHeight(0.01),
+        right: context.dynamicHeight(0.01),
       ),
       child: SizedBox(
         height: context.dynamicHeight(0.08),

@@ -1,13 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:octoten_mobile_app/screens/credit_card.dart';
-import 'package:octoten_mobile_app/screens/filter.dart';
-import 'package:octoten_mobile_app/screens/my_account_menu.dart';
-import 'package:octoten_mobile_app/screens/my_order.dart';
-import 'package:octoten_mobile_app/screens/review.dart';
-import 'package:octoten_mobile_app/screens/sory_by.dart';
-import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
+import 'package:octoten_mobile_app/pages/comment.dart';
+import 'package:octoten_mobile_app/pages/credit_card.dart';
+import 'package:octoten_mobile_app/pages/filter.dart';
+import 'package:octoten_mobile_app/pages/my_account_menu.dart';
+import 'package:octoten_mobile_app/pages/my_order.dart';
+import 'package:octoten_mobile_app/pages/my_order_detail.dart';
+import 'package:octoten_mobile_app/pages/review.dart';
+import 'package:octoten_mobile_app/pages/sign_in.dart';
+import 'package:octoten_mobile_app/pages/sign_up.dart';
+import 'package:octoten_mobile_app/pages/sory_by.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -71,6 +75,22 @@ class _MainsState extends State<Mains> {
                 height: 20,
               ),
               buildPaddingButton5(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton6(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton7(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton8(context),
+              const SizedBox(
+                height: 20,
+              ),
+              buildPaddingButton9(context),
               const SizedBox(
                 height: 20,
               ),
@@ -294,6 +314,160 @@ class _MainsState extends State<Mains> {
                 Builder(builder: (context) {
                   return const Text(
                     "Sory By",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPaddingButton6(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15),
+      child: Align(
+        alignment: Alignment.center,
+        child: SizedBox(
+          height: 40,
+          width: 250,
+          child: RaisedButton(
+            onPressed: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const MyOrderDetail()));
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Builder(builder: (context) {
+                  return const Text(
+                    "My order detail",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPaddingButton7(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15),
+      child: Align(
+        alignment: Alignment.center,
+        child: SizedBox(
+          height: 40,
+          width: 250,
+          child: RaisedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Comment()));
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Builder(builder: (context) {
+                  return const Text(
+                    "Comment",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPaddingButton8(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15),
+      child: Align(
+        alignment: Alignment.center,
+        child: SizedBox(
+          height: 40,
+          width: 250,
+          child: RaisedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Sign_Up()));
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Builder(builder: (context) {
+                  return const Text(
+                    "Sign Up",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPaddingButton9(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15),
+      child: Align(
+        alignment: Alignment.center,
+        child: SizedBox(
+          height: 40,
+          width: 250,
+          child: RaisedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const Sign_In()));
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Builder(builder: (context) {
+                  return const Text(
+                    "Sign in",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

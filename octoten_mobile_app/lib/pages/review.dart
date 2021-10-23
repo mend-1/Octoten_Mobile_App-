@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
-import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 
 import '../model/constants.dart';
 
@@ -48,12 +48,8 @@ class _ReviewState extends State<Review> {
         ),
         child: Material(
           elevation: 2,
-          child: Container(
-            height: context.dynamicHeight(0.7),
-            width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.all(
-              context.dynamicHeight(0.02),
-            ),
+          child: Padding(
+            padding: EdgeInsets.all(context.dynamicHeight(0.02)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

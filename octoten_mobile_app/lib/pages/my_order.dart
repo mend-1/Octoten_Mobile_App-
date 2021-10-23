@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
-import 'package:octoten_mobile_app/widgets/custom_appbar.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 
 import '../model/constants.dart';
 
@@ -48,12 +48,8 @@ class _MyOrderState extends State<MyOrder> {
         child: Material(
           borderRadius: BorderRadius.circular(5),
           elevation: 2,
-          child: Container(
-            height: context.dynamicHeight(0.3), //height container
-            width: MediaQuery.of(context).size.width,
-            padding: EdgeInsets.all(
-              context.dynamicHeight(0.02),
-            ),
+          child: Padding(
+            padding: EdgeInsets.all(context.dynamicHeight(0.02)),
             child: Column(
               children: [
                 Row(
@@ -62,8 +58,8 @@ class _MyOrderState extends State<MyOrder> {
                     SizedBox(
                       // height: context.dynamicHeight(0.08),
                       // width: context.dynamicHeight(0.35),
-                      height: 40,
-                      width: 180,
+                      height: 35,
+                      width: 170,
                       child: RaisedButton(
                         onPressed: () {},
                         shape: RoundedRectangleBorder(
@@ -75,8 +71,8 @@ class _MyOrderState extends State<MyOrder> {
                             "Order No: 15261872",
                             style: TextStyle(
                               color: Colors.orange,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
+                              fontWeight: FontWeight.w600,
+                              fontSize: 14,
                               fontFamily: 'Poppins',
                             ),
                           );
