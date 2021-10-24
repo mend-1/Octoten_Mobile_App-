@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:octoten_mobile_app/model/constants.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
+import 'package:octoten_mobile_app/pages/sign_up.dart';
 
 class Sign_In extends StatefulWidget {
   const Sign_In({Key? key}) : super(key: key);
@@ -71,117 +72,6 @@ class _Sign_InState extends State<Sign_In> {
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Row buildRowTextNotAMember(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Builder(builder: (context) {
-              return const Text("Not A Member?", style: kBlackNormal);
-            }),
-            SizedBox(
-              height: context.dynamicHeight(0.03),
-            ),
-          ],
-        ),
-        SizedBox(
-          width: context.dynamicWidth(0.02),
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Builder(builder: (context) {
-              return const Text("Sign Up", style: kRedBold);
-            }),
-            SizedBox(
-              height: context.dynamicHeight(0.03),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  SizedBox buildSizedBoxSignInButton() {
-    return SizedBox(
-      height: 35,
-      width: double.infinity,
-      child: RaisedButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        color: const Color(0xFFFA931A),
-        child: Builder(builder: (context) {
-          return const Text(
-            "Sign In",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-              fontSize: 14,
-              fontFamily: 'Poppins',
-            ),
-          );
-        }),
-      ),
-    );
-  }
-
-  Container buildContainerName(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
-      height: context.dynamicHeight(0.05),
-      width: double.infinity,
-      child: const TextField(
-        textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
-          ),
-          hintText: "Email Address or Mobile Phone",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
-          fillColor: Colors.white,
-          filled: true,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Container buildContainerPassword(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
-      height: context.dynamicHeight(0.05),
-      width: double.infinity,
-      child: const TextField(
-        textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 2.0, color: Colors.orange),
-          ),
-          hintText: "Password",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
-          fillColor: Colors.white,
-          filled: true,
-          suffixIcon: Icon(Icons.remove_red_eye_outlined),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
-          ),
-        ),
       ),
     );
   }
@@ -379,6 +269,126 @@ class _Sign_InState extends State<Sign_In> {
           ),
         ],
       ),
+    );
+  }
+
+  Container buildContainerName(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
+      height: context.dynamicHeight(0.05),
+      width: double.infinity,
+      child: const TextField(
+        textAlignVertical: TextAlignVertical.center,
+        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(width: 1, color: Colors.orange),
+          ),
+          hintText: "Email Address or Mobile Phone",
+          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          fillColor: Colors.white,
+          filled: true,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container buildContainerPassword(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
+      height: context.dynamicHeight(0.05),
+      width: double.infinity,
+      child: const TextField(
+        textAlignVertical: TextAlignVertical.center,
+        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(width: 2.0, color: Colors.orange),
+          ),
+          hintText: "Password",
+          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          fillColor: Colors.white,
+          filled: true,
+          suffixIcon: Icon(Icons.remove_red_eye_outlined),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+          ),
+        ),
+      ),
+    );
+  }
+
+  SizedBox buildSizedBoxSignInButton() {
+    return SizedBox(
+      height: 35,
+      width: double.infinity,
+      child: RaisedButton(
+        onPressed: () {},
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        color: const Color(0xFFFA931A),
+        child: Builder(builder: (context) {
+          return const Text(
+            "Sign In",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+              fontSize: 14,
+              fontFamily: 'Poppins',
+            ),
+          );
+        }),
+      ),
+    );
+  }
+
+  Row buildRowTextNotAMember(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Builder(builder: (context) {
+              return GestureDetector(
+                  onTap: () {},
+                  child: const Text("Not A Member?", style: kBlackNormal));
+            }),
+            SizedBox(
+              height: context.dynamicHeight(0.03),
+            ),
+          ],
+        ),
+        SizedBox(
+          width: context.dynamicWidth(0.02),
+        ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Builder(builder: (context) {
+              return GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const Sign_Up()));
+                  },
+                  child: const Text("Sign Up", style: kRedBold));
+            }),
+            SizedBox(
+              height: context.dynamicHeight(0.03),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
