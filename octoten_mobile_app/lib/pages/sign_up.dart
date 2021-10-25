@@ -14,6 +14,8 @@ class Sign_Up extends StatefulWidget {
 }
 
 class _Sign_UpState extends State<Sign_Up> {
+  bool _isObscure = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -349,21 +351,29 @@ class _Sign_UpState extends State<Sign_Up> {
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
       height: 35,
       width: double.infinity,
-      child: const TextField(
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+      child: TextField(
+        obscureText: _isObscure,
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(fontSize: 14, color: const Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          suffixIcon: Icon(Icons.remove_red_eye_outlined),
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
+          ),
+          suffixIcon: IconButton(
+            icon: Icon(_isObscure ? Icons.visibility : Icons.visibility_off),
+            onPressed: () {
+              setState(() {
+                _isObscure = !_isObscure;
+              });
+            },
           ),
         ),
       ),
