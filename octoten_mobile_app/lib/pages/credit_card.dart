@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
 
 import '../model/constants.dart';
 
@@ -19,6 +19,7 @@ class _CreditCardState extends State<CreditCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
         customTitle: "Credit Card",
       ),

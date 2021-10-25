@@ -16,6 +16,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "My information"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -80,15 +81,15 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Email",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -96,7 +97,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -106,19 +107,18 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
   Container buildContainerTextFieldCode(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        top: context.dynamicHeight(0.01),
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: 250,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Conformation Code",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -126,7 +126,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -164,10 +164,10 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
         child: Text(
           "Enter the confirmation code sent to your mobile phone",
           style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 12,
+            fontWeight: FontWeight.w400,
+            fontSize: 10,
             fontFamily: 'Poppins',
-            color: Colors.black.withOpacity(0.50),
+            color: Colors.grey.shade500,
           ),
         ),
       ),

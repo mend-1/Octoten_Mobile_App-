@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
 
 import '../model/constants.dart';
 
@@ -17,6 +17,7 @@ class _ReviewState extends State<Review> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
         customTitle: 'Review',
       ),
@@ -47,6 +48,7 @@ class _ReviewState extends State<Review> {
           context.dynamicHeight(0.01),
         ),
         child: Material(
+          color: Colors.white,
           elevation: 2,
           child: Padding(
             padding: EdgeInsets.all(context.dynamicHeight(0.02)),
@@ -86,23 +88,23 @@ class _ReviewState extends State<Review> {
                 Row(
                   children: [
                     Icon(
-                      Icons.star,
-                      color: Colors.yellow.shade700,
+                      Icons.star_rounded,
+                      color: Color(0xFFDFB73E),
                     ),
                     Icon(
-                      Icons.star,
-                      color: Colors.yellow.shade700,
+                      Icons.star_rounded,
+                      color: Color(0xFFDFB73E),
                     ),
                     Icon(
-                      Icons.star,
-                      color: Colors.yellow.shade700,
+                      Icons.star_rounded,
+                      color: Color(0xFFDFB73E),
                     ),
                     Icon(
-                      Icons.star,
-                      color: Colors.yellow.shade700,
+                      Icons.star_rounded,
+                      color: Color(0xFFDFB73E),
                     ),
                     const Icon(
-                      Icons.star,
+                      Icons.star_rounded,
                       color: Colors.grey,
                     ),
                   ],

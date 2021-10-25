@@ -18,14 +18,14 @@ const TextStyle kBlackNormal = TextStyle(
 
 const TextStyle kRedBold = TextStyle(
   fontFamily: 'Poppins',
-  color: Colors.red,
+  color: Color(0xFFEF3C4C),
   fontWeight: FontWeight.w600,
   fontSize: 14,
 );
 
 const TextStyle kRedNormal = TextStyle(
   fontFamily: 'Poppins',
-  color: Colors.red,
+  color: Color(0xFFEF3C4C),
   fontWeight: FontWeight.w400,
   fontSize: 14,
 );

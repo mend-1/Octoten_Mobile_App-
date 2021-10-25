@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
 
 import '../model/constants.dart';
 
@@ -17,6 +17,7 @@ class _MyOrderState extends State<MyOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "My Order"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -46,6 +47,7 @@ class _MyOrderState extends State<MyOrder> {
           context.dynamicHeight(0.01),
         ),
         child: Material(
+          color: Colors.white,
           borderRadius: BorderRadius.circular(5),
           elevation: 2,
           child: Padding(
@@ -56,8 +58,6 @@ class _MyOrderState extends State<MyOrder> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
-                      // height: context.dynamicHeight(0.08),
-                      // width: context.dynamicHeight(0.35),
                       height: 35,
                       width: 170,
                       child: RaisedButton(

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
 
 import 'detail.dart';
 
@@ -16,6 +16,7 @@ class _MyAccountState extends State<MyAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(
         customTitle: 'My Account',
       ),

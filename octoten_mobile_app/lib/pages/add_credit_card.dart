@@ -15,6 +15,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "My Credit Cards"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -28,11 +29,11 @@ class _AddCreditCardState extends State<AddCreditCard> {
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              buildContainerTextField(context),
+              buildContainerNameOnCard(context),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildContainerYourName(context),
+              buildContainerCardNumber(context),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
@@ -46,74 +47,14 @@ class _AddCreditCardState extends State<AddCreditCard> {
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildContainerDistrict(context),
+              buildContainerCvc(context),
               SizedBox(
-                height: context.dynamicHeight(0.02),
+                height: context.dynamicHeight(0.03),
               ),
               buildSizedBoxSaveButton(),
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Container buildContainerYY(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        top: context.dynamicHeight(0.01),
-        left: context.dynamicHeight(0.02),
-        right: context.dynamicHeight(0.02),
-      ),
-      height: context.dynamicHeight(0.06),
-      width: 165,
-      child: const TextField(
-        textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
-          ),
-          hintText: "YY",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
-          fillColor: Colors.white,
-          filled: true,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Container buildContainerMM(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(
-        top: context.dynamicHeight(0.01),
-        left: context.dynamicHeight(0.02),
-        right: context.dynamicHeight(0.02),
-      ),
-      height: context.dynamicHeight(0.06),
-      width: 165,
-      child: const TextField(
-        textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
-        decoration: InputDecoration(
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
-          ),
-          hintText: "MM",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
-          fillColor: Colors.white,
-          filled: true,
-          enabledBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
-          ),
-        ),
       ),
     );
   }
@@ -137,22 +78,22 @@ class _AddCreditCardState extends State<AddCreditCard> {
     );
   }
 
-  Container buildContainerTextField(BuildContext context) {
+  Container buildContainerNameOnCard(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
         top: context.dynamicHeight(0.01),
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name On Card",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -160,29 +101,29 @@ class _AddCreditCardState extends State<AddCreditCard> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
     );
   }
 
-  Container buildContainerYourName(BuildContext context) {
+  Container buildContainerCardNumber(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
         top: context.dynamicHeight(0.01),
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Card Number",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -190,29 +131,89 @@ class _AddCreditCardState extends State<AddCreditCard> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
     );
   }
 
-  Container buildContainerDistrict(BuildContext context) {
+  Container buildContainerMM(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
         top: context.dynamicHeight(0.01),
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
-      width: double.infinity,
+      height: 35,
+      width: 165,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
+          ),
+          hintText: "MM",
+          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          fillColor: Colors.white,
+          filled: true,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container buildContainerYY(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(
+        top: context.dynamicHeight(0.01),
+        left: context.dynamicHeight(0.02),
+        right: context.dynamicHeight(0.02),
+      ),
+      height: 35,
+      width: 165,
+      child: const TextField(
+        textAlignVertical: TextAlignVertical.center,
+        style: TextStyle(fontSize: 14.0, height: 1.0),
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
+          ),
+          hintText: "YY",
+          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          fillColor: Colors.white,
+          filled: true,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Container buildContainerCvc(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(
+        top: context.dynamicHeight(0.01),
+        left: context.dynamicHeight(0.02),
+        right: context.dynamicHeight(0.02),
+      ),
+      height: 35,
+      width: double.infinity,
+      child: const TextField(
+        textAlignVertical: TextAlignVertical.center,
+        style: TextStyle(fontSize: 14.0, height: 1.0),
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "CVC",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -220,7 +221,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),

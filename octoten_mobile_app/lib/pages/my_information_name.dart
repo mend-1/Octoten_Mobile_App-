@@ -15,6 +15,7 @@ class _MyInformationNameState extends State<MyInformationName> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "My information"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -69,11 +70,11 @@ class _MyInformationNameState extends State<MyInformationName> {
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -81,7 +82,7 @@ class _MyInformationNameState extends State<MyInformationName> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),

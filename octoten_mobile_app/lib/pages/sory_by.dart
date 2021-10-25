@@ -13,6 +13,7 @@ class SoryBy extends StatefulWidget {
 class _SoryByState extends State<SoryBy> {
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Colors.white,
         appBar: CustomCloseAppBar(
           customTitle: 'Sory By',
         ),

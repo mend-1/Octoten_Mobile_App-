@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:octoten_mobile_app/core/custom_appbar.dart';
 import 'package:octoten_mobile_app/model/constants.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/model/rating.dart';
-import 'package:octoten_mobile_app/core/custom_appbar.dart';
 
 class Comment extends StatefulWidget {
   const Comment({Key? key}) : super(key: key);
@@ -21,6 +21,7 @@ class _CommentState extends State<Comment> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "Comment"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -34,9 +35,9 @@ class _CommentState extends State<Comment> {
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              const Divider(),
-              SizedBox(
-                height: context.dynamicHeight(0.01),
+              const Padding(
+                padding: EdgeInsets.only(left: 13.0, right: 13.0),
+                child: Divider(),
               ),
               rating(context),
               SizedBox(
@@ -129,21 +130,21 @@ class _CommentState extends State<Comment> {
   Container buildContainerTextField(BuildContext context) {
     return Container(
       margin: EdgeInsets.all(context.dynamicHeight(0.02)),
-      height: maxLines * 30.0,
+      height: maxLines * 28.0,
       child: TextField(
-        style: const TextStyle(fontSize: 14.0, height: 2.0, color: Colors.red),
+        style: const TextStyle(fontSize: 14.0, height: 1.4),
         maxLines: maxLines,
         decoration: const InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Review",
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -153,7 +154,7 @@ class _CommentState extends State<Comment> {
   SizedBox submit() {
     return SizedBox(
       height: 35,
-      width: 150,
+      width: 170,
       child: RaisedButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(

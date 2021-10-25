@@ -13,6 +13,7 @@ class Filter extends StatefulWidget {
 class _FilterState extends State<Filter> {
   @override
   Widget build(BuildContext context) => Scaffold(
+        backgroundColor: Colors.white,
         appBar: CustomCloseAppBar(
           customTitle: 'Filter',
         ),

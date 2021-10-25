@@ -16,6 +16,7 @@ class _Sign_InState extends State<Sign_In> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: ListView(
         padding: EdgeInsets.symmetric(
           vertical: context.dynamicHeight(0.05),
@@ -29,6 +30,9 @@ class _Sign_InState extends State<Sign_In> {
                 height: context.dynamicHeight(0.02),
               ),
               buildAlignTextSignIn(context),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
               buildSizedBoxApple(context),
               SizedBox(
                 height: context.dynamicHeight(0.02),
@@ -42,7 +46,10 @@ class _Sign_InState extends State<Sign_In> {
                 height: context.dynamicHeight(0.02),
               ),
               buildAlignTextOr(context),
-              buildContainerName(context),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              buildContainerEmail(context),
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
@@ -95,7 +102,6 @@ class _Sign_InState extends State<Sign_In> {
         ),
         Align(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Builder(builder: (context) {
                 return const Text("OCTOTEN",
@@ -107,9 +113,6 @@ class _Sign_InState extends State<Sign_In> {
                       letterSpacing: 2,
                     ));
               }),
-              SizedBox(
-                height: context.dynamicHeight(0.010),
-              ),
             ],
           ),
         ),
@@ -131,9 +134,6 @@ class _Sign_InState extends State<Sign_In> {
                   fontSize: 24,
                 ));
           }),
-          SizedBox(
-            height: context.dynamicHeight(0.03),
-          ),
         ],
       ),
     );
@@ -153,7 +153,7 @@ class _Sign_InState extends State<Sign_In> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: context.dynamicHeight(0.05),
+              height: context.dynamicHeight(0.04),
               child: const Image(
                 image: AssetImage("assets/apple.png"),
               ),
@@ -190,7 +190,7 @@ class _Sign_InState extends State<Sign_In> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height: context.dynamicHeight(0.04),
+              height: context.dynamicHeight(0.036),
               child: const Image(
                 image: AssetImage("assets/google.png"),
               ),
@@ -264,26 +264,25 @@ class _Sign_InState extends State<Sign_In> {
                   fontSize: 24,
                 ));
           }),
-          SizedBox(
-            height: context.dynamicHeight(0.03),
-          ),
         ],
       ),
     );
   }
 
-  Container buildContainerName(BuildContext context) {
+  Container buildContainerEmail(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: const TextField(
-        textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(
+          fontSize: 14.0,
+          height: 1.0,
+        ),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1, color: Color(0xFFFA931A)),
           ),
           hintText: "Email Address or Mobile Phone",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -291,7 +290,7 @@ class _Sign_InState extends State<Sign_In> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -301,15 +300,15 @@ class _Sign_InState extends State<Sign_In> {
   Container buildContainerPassword(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 2.0, color: Colors.orange),
+            borderSide: BorderSide(width: 2.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -318,7 +317,7 @@ class _Sign_InState extends State<Sign_In> {
           suffixIcon: Icon(Icons.remove_red_eye_outlined),
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -327,7 +326,7 @@ class _Sign_InState extends State<Sign_In> {
 
   SizedBox buildSizedBoxSignInButton() {
     return SizedBox(
-      height: 35,
+      height: 40,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
@@ -362,9 +361,6 @@ class _Sign_InState extends State<Sign_In> {
                   onTap: () {},
                   child: const Text("Not A Member?", style: kBlackNormal));
             }),
-            SizedBox(
-              height: context.dynamicHeight(0.03),
-            ),
           ],
         ),
         SizedBox(
@@ -383,9 +379,6 @@ class _Sign_InState extends State<Sign_In> {
                   },
                   child: const Text("Sign Up", style: kRedBold));
             }),
-            SizedBox(
-              height: context.dynamicHeight(0.03),
-            ),
           ],
         ),
       ],

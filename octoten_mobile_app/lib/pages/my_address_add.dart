@@ -17,6 +17,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "My Address"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -68,7 +69,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           "Add Address",
           style: TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w600,
             fontFamily: 'Poppins',
           ),
         ),
@@ -83,15 +84,15 @@ class _MyAddressAddState extends State<MyAddressAdd> {
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Address Name",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -99,7 +100,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -113,15 +114,15 @@ class _MyAddressAddState extends State<MyAddressAdd> {
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Name",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -129,7 +130,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -143,15 +144,15 @@ class _MyAddressAddState extends State<MyAddressAdd> {
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "City",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -159,7 +160,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -173,15 +174,15 @@ class _MyAddressAddState extends State<MyAddressAdd> {
         left: context.dynamicHeight(0.02),
         right: context.dynamicHeight(0.02),
       ),
-      height: context.dynamicHeight(0.06),
+      height: 35,
       width: double.infinity,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0, color: Colors.red),
+        style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "District",
           hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
@@ -189,7 +190,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),
@@ -201,19 +202,19 @@ class _MyAddressAddState extends State<MyAddressAdd> {
       margin: EdgeInsets.all(context.dynamicHeight(0.02)),
       height: maxLines * 20.0,
       child: TextField(
-        style: const TextStyle(fontSize: 14.0, height: 2.0, color: Colors.red),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         maxLines: maxLines,
         decoration: const InputDecoration(
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Colors.orange),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Full Address",
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Colors.orange, width: 2.0),
+            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
       ),

@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/model/context_extensions.dart';
 
 import '../model/constants.dart';
 
@@ -17,6 +17,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "My Order Detail"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -27,19 +28,28 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
           Column(
             children: [
               buildPaddingCard(context),
-              const Divider(),
-              buildPaddingone(context),
-              buildPaddingtwo(context),
+              const Padding(
+                padding: EdgeInsets.only(left: 13, right: 13),
+                child: Divider(),
+              ),
+              buildPaddingCameraAndText(context),
+              buildPaddingButtons(context),
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              const Divider(),
-              buildPaddingthre(context),
-              buildPaddingfor(context),
+              const Padding(
+                padding: EdgeInsets.only(left: 13, right: 13),
+                child: Divider(),
+              ),
+              buildPaddingVaccum(context),
+              buildPaddingButtons2(context),
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              const Divider(),
+              const Padding(
+                padding: EdgeInsets.only(left: 13, right: 13),
+                child: Divider(),
+              ),
               textdeliveryaddress(),
               textbenyeder(),
               textbillingaddres(),
@@ -47,64 +57,6 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             ],
           ),
         ],
-      ),
-    );
-  }
-
-  Align textbillingaddres() {
-    return const Align(
-      alignment: Alignment.topLeft,
-      child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
-          "Billing Address",
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-            fontFamily: 'Poppins',
-            color: Colors.black,
-          ),
-        ),
-      ),
-    );
-  }
-
-  Align textbenyeder() {
-    return Align(
-      alignment: Alignment.topLeft,
-      child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
-          "Ben Yeder\n"
-          "0 532 202 40 59\n"
-          "Avrupa Konutları TEM Sitesi."
-          "Blok 87 Kat 12 Daire 12\n"
-          "Gaziosmanpaşa / İstanbul",
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 14,
-            fontFamily: 'Poppins',
-            color: Colors.black.withOpacity(0.70),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Align textdeliveryaddress() {
-    return const Align(
-      alignment: Alignment.topLeft,
-      child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
-          "Delivery Address",
-          style: TextStyle(
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-            fontFamily: 'Poppins',
-            color: Colors.black,
-          ),
-        ),
       ),
     );
   }
@@ -262,7 +214,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
     );
   }
 
-  Padding buildPaddingone(BuildContext context) {
+  Padding buildPaddingCameraAndText(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
         context.dynamicHeight(0.01),
@@ -281,7 +233,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             ),
           ),
           SizedBox(
-            width: context.dynamicWidth(0.15),
+            width: context.dynamicWidth(0.1),
           ),
           Align(
             child: Column(
@@ -305,7 +257,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                         fontFamily: 'Poppins',
-                        color: Colors.black.withOpacity(0.60),
+                        color: Colors.grey.shade500,
                       ),
                     ),
                   ],
@@ -318,7 +270,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
     );
   }
 
-  Padding buildPaddingtwo(BuildContext context) {
+  Padding buildPaddingButtons(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
         context.dynamicHeight(0.02),
@@ -352,7 +304,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             height: 35,
             width: 150,
             child: OutlineButton(
-              borderSide: const BorderSide(color: Colors.red, width: 2.0),
+              borderSide: const BorderSide(color: Colors.red, width: 1.0),
               onPressed: () {},
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -376,7 +328,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
     );
   }
 
-  Padding buildPaddingthre(BuildContext context) {
+  Padding buildPaddingVaccum(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
         context.dynamicHeight(0.01),
@@ -395,7 +347,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             ),
           ),
           SizedBox(
-            width: context.dynamicWidth(0.15),
+            width: context.dynamicWidth(0.1),
           ),
           Align(
             child: Column(
@@ -409,7 +361,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                 ),
                 Row(
                   children: [
-                    const Text("\$200", style: kBlackBold),
+                    const Text("\$500", style: kBlackBold),
                     SizedBox(
                       width: context.dynamicWidth(0.03),
                     ),
@@ -419,7 +371,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
                         fontFamily: 'Poppins',
-                        color: Colors.black.withOpacity(0.60),
+                        color: Colors.grey.shade500,
                       ),
                     ),
                   ],
@@ -432,7 +384,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
     );
   }
 
-  Padding buildPaddingfor(BuildContext context) {
+  Padding buildPaddingButtons2(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
         context.dynamicHeight(0.02),
@@ -466,7 +418,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             height: 35,
             width: 150,
             child: OutlineButton(
-              borderSide: const BorderSide(color: Colors.red, width: 2.0),
+              borderSide: const BorderSide(color: Colors.red, width: 1.0),
               onPressed: () {},
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
@@ -486,6 +438,64 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Align textdeliveryaddress() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "Delivery Address",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            fontFamily: 'Poppins',
+            color: Colors.black,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align textbenyeder() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "Ben Yeder\n"
+          "0 532 202 40 59\n"
+          "Avrupa Konutları TEM Sitesi."
+          "Blok 87 Kat 12 Daire 12\n"
+          "Gaziosmanpaşa / İstanbul",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            fontFamily: 'Poppins',
+            color: Color(0xFF232F3E),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align textbillingaddres() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "Billing Address",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            fontFamily: 'Poppins',
+            color: Colors.black,
+          ),
+        ),
       ),
     );
   }

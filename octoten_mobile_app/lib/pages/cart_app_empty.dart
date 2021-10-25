@@ -15,6 +15,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: CustomAppBar(customTitle: "Cart"),
       body: ListView(
         padding: EdgeInsets.symmetric(
@@ -27,7 +28,26 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildContainerBasketImage(),
+              CircleAvatar(
+                backgroundColor: const Color(0xFFEF3C4C),
+                radius: 75,
+                child: Stack(children: [
+                  Builder(builder: (context) {
+                    return const Align(
+                      alignment: Alignment.center,
+                      child: CircleAvatar(
+                        backgroundColor: Colors.white,
+                        radius: 73,
+                        child: Icon(
+                          CupertinoIcons.shopping_cart,
+                          size: 37,
+                          color: Color(0xFFEF3C4C),
+                        ),
+                      ),
+                    );
+                  }),
+                ]),
+              ),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
@@ -62,33 +82,20 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
     );
   }
 
-  Container buildContainerBasketImage() {
-    return Container(
-      height: 135,
-      width: 135,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage("assets/basket.png"),
-          fit: BoxFit.cover,
-        ),
-      ),
-    );
-  }
-
   Padding buildPaddingLetsFindText(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
         context.dynamicHeight(0.02),
       ),
-      child: Align(
+      child: const Align(
         alignment: Alignment.center,
         child: Text(
           "Lets Find Your Dream Products",
           style: TextStyle(
             fontSize: 14,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w400,
             fontFamily: 'Poppins',
-            color: Colors.black.withOpacity(0.70),
+            color: Color(0xFF232F3E),
           ),
         ),
       ),
