@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
 import 'package:octoten_mobile_app/pages/add_credit_card.dart';
+import 'package:octoten_mobile_app/pages/cart_app.dart';
 import 'package:octoten_mobile_app/pages/cart_app_empty.dart';
 import 'package:octoten_mobile_app/pages/comment.dart';
 import 'package:octoten_mobile_app/pages/credit_card.dart';
@@ -116,6 +117,10 @@ class _MainsState extends State<Mains> {
                 height: 10,
               ),
               buildPaddingButton14(context),
+              const SizedBox(
+                height: 10,
+              ),
+              buildPaddingButton15(context),
             ],
           ),
         ],
@@ -688,6 +693,44 @@ class _MainsState extends State<Mains> {
                 Builder(builder: (context) {
                   return const Text(
                     "Add Credit Card",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  );
+                }),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Padding buildPaddingButton15(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15),
+      child: Align(
+        alignment: Alignment.center,
+        child: SizedBox(
+          height: 40,
+          width: 250,
+          child: RaisedButton(
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const CartApp()));
+            },
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            color: Colors.orange,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Builder(builder: (context) {
+                  return const Text(
+                    "Cart App",
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,

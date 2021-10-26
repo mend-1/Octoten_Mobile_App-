@@ -360,7 +360,8 @@ class _Sign_UpState extends State<Sign_Up> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
-          hintStyle: TextStyle(fontSize: 14, color: const Color(0xFFB3B1B1)),
+          hintStyle:
+              const TextStyle(fontSize: 14, color: const Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: const OutlineInputBorder(
