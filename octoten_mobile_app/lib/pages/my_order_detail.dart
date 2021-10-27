@@ -22,7 +22,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
       body: ListView(
         padding: EdgeInsets.symmetric(
           vertical: context.dynamicHeight(0.02),
-          horizontal: context.dynamicWidth(0.02),
+          horizontal: context.dynamicWidth(0.03),
         ),
         children: [
           Column(
@@ -30,7 +30,9 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               buildPaddingCard(context),
               const Padding(
                 padding: EdgeInsets.only(left: 13, right: 13),
-                child: Divider(),
+                child: Divider(
+                  thickness: 1,
+                ),
               ),
               buildPaddingCameraAndText(context),
               buildPaddingButtons(context),
@@ -39,7 +41,9 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 13, right: 13),
-                child: Divider(),
+                child: Divider(
+                  thickness: 1,
+                ),
               ),
               buildPaddingVaccum(context),
               buildPaddingButtons2(context),
@@ -48,7 +52,9 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 13, right: 13),
-                child: Divider(),
+                child: Divider(
+                  thickness: 1,
+                ),
               ),
               textdeliveryaddress(),
               textbenyeder(),
@@ -79,16 +85,11 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  color: Colors.orange.shade50,
+                  color: const Color(0xFFFFEBD5),
                   child: Builder(builder: (context) {
                     return const Text(
                       "Order No: 15261872",
-                      style: TextStyle(
-                        color: Colors.orange,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                      ),
+                      style: kYellowBold,
                     );
                   }),
                 ),
@@ -102,7 +103,8 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Status",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Poppins-Regular',
+                          fontWeight: FontWeight.w400,
                         ),
                       );
                     }),
@@ -130,7 +132,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Delivery Adress",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Poppins-Regular',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -142,9 +144,9 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                       "Home",
                       style: TextStyle(
                         fontSize: 14,
-                        fontFamily: 'Poppins',
+                        fontFamily: 'Poppins-SemiBold',
                         fontWeight: FontWeight.w600,
-                        color: Colors.amber,
+                        color: Color(0xFFFAD61A),
                       ),
                     ),
                   ],
@@ -159,7 +161,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Total Price",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Poppins-Regular',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -169,11 +171,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     ),
                     const Text(
                       "\$2050",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: kBlackBold,
                     ),
                   ],
                 ),
@@ -187,7 +185,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Order Date",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins',
+                          fontFamily: 'Poppins-Regular',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -197,12 +195,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     ),
                     const Text(
                       "12 Feb 2021",
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        color: Colors.orange,
-                      ),
+                      style: kYellowBold,
                     ),
                   ],
                 ),
@@ -224,10 +217,10 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
         children: [
           Container(
             height: 80,
-            width: 80,
+            width: 78,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/kamera1.png"),
+                image: AssetImage("assets/images/kamera1.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -251,13 +244,13 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     SizedBox(
                       width: context.dynamicWidth(0.03),
                     ),
-                    Text(
+                    const Text(
                       "(5 ıtem)",
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        fontFamily: 'Poppins',
-                        color: Colors.grey.shade500,
+                        fontFamily: 'Poppins-Regular',
+                        color: Color(0xFF9496A4),
                       ),
                     ),
                   ],
@@ -294,7 +287,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Poppins-Bold',
                   ),
                 );
               }),
@@ -317,7 +310,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Color(0xFFEF3C4C),
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Poppins-Bold',
                   ),
                 );
               }),
@@ -338,10 +331,10 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
         children: [
           Container(
             height: 80,
-            width: 80,
+            width: 78,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/vacuum.png"),
+                image: AssetImage("assets/images/vacuum.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -365,13 +358,13 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     SizedBox(
                       width: context.dynamicWidth(0.03),
                     ),
-                    Text(
+                    const Text(
                       "(2 ıtem)",
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        fontFamily: 'Poppins',
-                        color: Colors.grey.shade500,
+                        fontFamily: 'Poppins-Regular',
+                        color: Color(0xFF9496A4),
                       ),
                     ),
                   ],
@@ -408,7 +401,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Poppins-Bold',
                   ),
                 );
               }),
@@ -431,7 +424,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Color(0xFFEF3C4C),
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins',
+                    fontFamily: 'Poppins-Bold',
                   ),
                 );
               }),
@@ -452,8 +445,8 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            fontFamily: 'Poppins',
-            color: Colors.black,
+            fontFamily: 'Poppins-SemiBold',
+            color: Color(0xFF232F3E),
           ),
         ),
       ),
@@ -472,9 +465,10 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
           "Blok 87 Kat 12 Daire 12\n"
           "Gaziosmanpaşa / İstanbul",
           style: TextStyle(
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w400,
             fontSize: 14,
-            fontFamily: 'Poppins',
+            fontStyle: FontStyle.normal,
+            fontFamily: 'Poppins-Regular',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -492,8 +486,8 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            fontFamily: 'Poppins',
-            color: Colors.black,
+            fontFamily: 'Poppins-SemiBold',
+            color: Color(0xFF232F3E),
           ),
         ),
       ),

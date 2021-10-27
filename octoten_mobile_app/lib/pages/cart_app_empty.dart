@@ -36,14 +36,10 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
                     return const Align(
                       alignment: Alignment.center,
                       child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        radius: 73,
-                        child: Icon(
-                          CupertinoIcons.shopping_cart,
-                          size: 37,
-                          color: Color(0xFFEF3C4C),
-                        ),
-                      ),
+                          backgroundColor: Colors.white,
+                          radius: 73,
+                          child: Image(
+                              image: AssetImage("assets/images/Vector.png"))),
                     );
                   }),
                 ]),
@@ -75,7 +71,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w700,
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-SemiBold',
           ),
         ),
       ),
@@ -94,7 +90,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w400,
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-Regular',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -119,7 +115,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'Poppins-Bold',
             ),
           );
         }),

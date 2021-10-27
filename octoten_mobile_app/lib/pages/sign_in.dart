@@ -94,7 +94,7 @@ class _Sign_InState extends State<Sign_In> {
           width: 50,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/octoten.png"),
+              image: AssetImage("assets/images/octoten.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -110,8 +110,8 @@ class _Sign_InState extends State<Sign_In> {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 25,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 24,
                       letterSpacing: 2,
                     ));
               }),
@@ -130,7 +130,7 @@ class _Sign_InState extends State<Sign_In> {
           Builder(builder: (context) {
             return const Text("Sign In",
                 style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Poppins-SemiBold',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -143,7 +143,7 @@ class _Sign_InState extends State<Sign_In> {
 
   SizedBox buildSizedBoxApple(BuildContext context) {
     return SizedBox(
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
@@ -157,17 +157,17 @@ class _Sign_InState extends State<Sign_In> {
             SizedBox(
               height: context.dynamicHeight(0.04),
               child: const Image(
-                image: AssetImage("assets/apple.png"),
+                image: AssetImage("assets/images/apple.png"),
               ),
             ),
             SizedBox(
               width: context.dynamicWidth(0.02),
             ),
-            Text(
+            const Text(
               "Sign In With Apple",
               style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Colors.black.withOpacity(0.50),
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
@@ -180,7 +180,7 @@ class _Sign_InState extends State<Sign_In> {
 
   SizedBox buildSizedBoxGoogle(BuildContext context) {
     return SizedBox(
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
@@ -194,17 +194,17 @@ class _Sign_InState extends State<Sign_In> {
             SizedBox(
               height: context.dynamicHeight(0.036),
               child: const Image(
-                image: AssetImage("assets/google.png"),
+                image: AssetImage("assets/images/google.png"),
               ),
             ),
             SizedBox(
               width: context.dynamicWidth(0.02),
             ),
-            Text(
+            const Text(
               "Sign In With Google",
               style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Colors.black.withOpacity(0.50),
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
@@ -217,7 +217,7 @@ class _Sign_InState extends State<Sign_In> {
 
   SizedBox buildSizedBoxFacebook(BuildContext context) {
     return SizedBox(
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
@@ -231,17 +231,17 @@ class _Sign_InState extends State<Sign_In> {
             SizedBox(
               height: context.dynamicHeight(0.04),
               child: const Image(
-                image: AssetImage("assets/facebook.png"),
+                image: AssetImage("assets/images/facebook.png"),
               ),
             ),
             SizedBox(
               width: context.dynamicWidth(0.02),
             ),
-            Text(
+            const Text(
               "Sign In With Facebook",
               style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Colors.black.withOpacity(0.50),
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
@@ -260,7 +260,7 @@ class _Sign_InState extends State<Sign_In> {
           Builder(builder: (context) {
             return const Text("Or",
                 style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Poppins-SemiBold',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -287,7 +287,11 @@ class _Sign_InState extends State<Sign_In> {
             borderSide: BorderSide(width: 1, color: Color(0xFFFA931A)),
           ),
           hintText: "Email Address or Mobile Phone",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -314,7 +318,11 @@ class _Sign_InState extends State<Sign_In> {
             borderSide: BorderSide(width: 2.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
-          hintStyle: const TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: const TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: const OutlineInputBorder(
@@ -351,7 +359,7 @@ class _Sign_InState extends State<Sign_In> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'OpenSans-Bold',
             ),
           );
         }),

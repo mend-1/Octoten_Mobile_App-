@@ -13,8 +13,7 @@ class CreditCard extends StatefulWidget {
 }
 
 class _CreditCardState extends State<CreditCard> {
-  String sec = "";
-  String secim = "";
+  String chose = "";
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +49,7 @@ class _CreditCardState extends State<CreditCard> {
         const Text(
           "Credit Card",
           style: TextStyle(
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-SemiBold',
             color: Colors.black,
             fontWeight: FontWeight.w600,
             fontSize: 16,
@@ -70,12 +69,11 @@ class _CreditCardState extends State<CreditCard> {
   RadioListTile<String> buildRadioListTile1() {
     return RadioListTile<String>(
       value: "A",
-      groupValue: sec,
+      groupValue: chose,
       activeColor: Colors.red,
       onChanged: (deger) {
         setState(() {
-          sec = deger!;
-          debugPrint("secilen deger: $deger");
+          chose = deger!;
         });
       },
       title: const Text(
@@ -90,11 +88,7 @@ class _CreditCardState extends State<CreditCard> {
         onTap: () {},
         child: const Text(
           "Change",
-          style: TextStyle(
-            color: Colors.orangeAccent,
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-          ),
+          style: kYellowNormal,
         ),
       ),
     );
@@ -103,12 +97,11 @@ class _CreditCardState extends State<CreditCard> {
   RadioListTile<String> buildRadioListTile2() {
     return RadioListTile<String>(
       value: "B",
-      groupValue: sec,
+      groupValue: chose,
       activeColor: Colors.red,
       onChanged: (deger) {
         setState(() {
-          sec = deger!;
-          debugPrint("secilen deger: $deger");
+          chose = deger!;
         });
       },
       title: const Text(
@@ -123,11 +116,7 @@ class _CreditCardState extends State<CreditCard> {
         onTap: () {},
         child: const Text(
           "Change",
-          style: TextStyle(
-            color: Colors.orangeAccent,
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-          ),
+          style: kYellowNormal,
         ),
       ),
     );

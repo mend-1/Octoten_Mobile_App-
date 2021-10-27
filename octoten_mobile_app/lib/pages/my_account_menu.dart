@@ -59,7 +59,7 @@ class _MyAccountState extends State<MyAccount> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            color: Colors.orange.shade50,
+            color: const Color(0xFFFFEBD5),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -68,7 +68,8 @@ class _MyAccountState extends State<MyAccount> {
                     return const Text(
                       "Sign out",
                       style: TextStyle(
-                        color: Colors.orange,
+                        fontFamily: "Poppins-Bold",
+                        color: Color(0xFFFA931A),
                         fontWeight: FontWeight.w700,
                         fontSize: 14,
                       ),
@@ -103,18 +104,19 @@ class _MyAccountState extends State<MyAccount> {
               children: [
                 Padding(
                   padding: EdgeInsets.all(context.dynamicHeight(0.02)),
-                  child: Text(
+                  child: const Text(
                     "My Messages",
                     style: TextStyle(
+                      fontFamily: "Poppins-SemiBold",
                       fontSize: 14,
-                      color: Colors.black.withOpacity(0.70),
+                      color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  color: Colors.grey,
+                  color: Color(0xFF9496A4),
                   size: 20,
                 )
               ],
@@ -145,18 +147,19 @@ class _MyAccountState extends State<MyAccount> {
               children: [
                 Padding(
                   padding: EdgeInsets.all(context.dynamicHeight(0.02)),
-                  child: Text(
+                  child: const Text(
                     "My Returns",
                     style: TextStyle(
+                      fontFamily: "Poppins-SemiBold",
                       fontSize: 14,
-                      color: Colors.black.withOpacity(0.70),
+                      color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  color: Colors.grey,
+                  color: Color(0xFF9496A4),
                   size: 20,
                 )
               ],
@@ -188,18 +191,19 @@ class _MyAccountState extends State<MyAccount> {
               children: [
                 Padding(
                   padding: EdgeInsets.all(context.dynamicHeight(0.02)),
-                  child: Text(
+                  child: const Text(
                     "My Credit Cards",
                     style: TextStyle(
+                      fontFamily: "Poppins-SemiBold",
                       fontSize: 14,
-                      color: Colors.black.withOpacity(0.70),
+                      color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  color: Colors.grey,
+                  color: Color(0xFF9496A4),
                   size: 20,
                 )
               ],
@@ -231,18 +235,19 @@ class _MyAccountState extends State<MyAccount> {
               children: [
                 Padding(
                   padding: EdgeInsets.all(context.dynamicHeight(0.02)),
-                  child: Text(
+                  child: const Text(
                     "My Address",
                     style: TextStyle(
+                      fontFamily: "Poppins-SemiBold",
                       fontSize: 14,
-                      color: Colors.black.withOpacity(0.70),
+                      color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  color: Colors.grey,
+                  color: Color(0xFF9496A4),
                   size: 20,
                 )
               ],
@@ -274,18 +279,19 @@ class _MyAccountState extends State<MyAccount> {
               children: [
                 Padding(
                   padding: EdgeInsets.all(context.dynamicHeight(0.02)),
-                  child: Text(
+                  child: const Text(
                     "My information",
                     style: TextStyle(
+                      fontFamily: "Poppins-SemiBold",
                       fontSize: 14,
-                      color: Colors.black.withOpacity(0.70),
+                      color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  color: Colors.grey,
+                  color: Color(0xFF9496A4),
                   size: 20,
                 )
               ],
@@ -316,18 +322,19 @@ class _MyAccountState extends State<MyAccount> {
               children: [
                 Padding(
                   padding: EdgeInsets.all(context.dynamicHeight(0.02)),
-                  child: Text(
+                  child: const Text(
                     "My Order",
                     style: TextStyle(
+                      fontFamily: "Poppins-SemiBold",
                       fontSize: 14,
-                      color: Colors.black.withOpacity(0.70),
+                      color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
                 const Icon(
                   Icons.arrow_forward_ios,
-                  color: Colors.grey,
+                  color: Color(0xFF9496A4),
                   size: 20,
                 )
               ],

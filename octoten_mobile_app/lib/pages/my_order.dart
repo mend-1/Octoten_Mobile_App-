@@ -49,7 +49,7 @@ class _MyOrderState extends State<MyOrder> {
         child: Material(
           color: Colors.white,
           borderRadius: BorderRadius.circular(5),
-          elevation: 2,
+          elevation: 1,
           child: Padding(
             padding: EdgeInsets.all(context.dynamicHeight(0.02)),
             child: Column(
@@ -65,7 +65,7 @@ class _MyOrderState extends State<MyOrder> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        color: Colors.orange.shade50,
+                        color: const Color(0xFFFFEBD5),
                         child: Builder(builder: (context) {
                           return const Text(
                             "Order No: 15261872",
@@ -73,7 +73,7 @@ class _MyOrderState extends State<MyOrder> {
                               color: Colors.orange,
                               fontWeight: FontWeight.w600,
                               fontSize: 14,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Poppins-SemiBold',
                             ),
                           );
                         }),
@@ -88,7 +88,8 @@ class _MyOrderState extends State<MyOrder> {
                               "Status",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins',
+                                fontWeight: FontWeight.w400,
+                                fontFamily: 'Poppins-Regular',
                               ),
                             );
                           }),
@@ -116,7 +117,7 @@ class _MyOrderState extends State<MyOrder> {
                               "Delivery Adress",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Poppins-Regular',
                                 fontWeight: FontWeight.w400,
                               ),
                             );
@@ -128,9 +129,9 @@ class _MyOrderState extends State<MyOrder> {
                             "Home",
                             style: TextStyle(
                               fontSize: 14,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Poppins-SemiBold',
                               fontWeight: FontWeight.w600,
-                              color: Colors.amber,
+                              color: Color(0xFFFAD61A),
                             ),
                           ),
                         ],
@@ -145,7 +146,7 @@ class _MyOrderState extends State<MyOrder> {
                               "Total Price",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Poppins-Regular',
                                 fontWeight: FontWeight.w400,
                               ),
                             );
@@ -157,7 +158,7 @@ class _MyOrderState extends State<MyOrder> {
                             "\$2050",
                             style: TextStyle(
                               fontSize: 14,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Poppins-SemiBold',
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -173,7 +174,7 @@ class _MyOrderState extends State<MyOrder> {
                               "Order Date",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins',
+                                fontFamily: 'Poppins-Regular',
                                 fontWeight: FontWeight.w400,
                               ),
                             );
@@ -185,9 +186,9 @@ class _MyOrderState extends State<MyOrder> {
                             "12 Feb 2021",
                             style: TextStyle(
                               fontSize: 14,
-                              fontFamily: 'Poppins',
+                              fontFamily: 'Poppins-SemiBold',
                               fontWeight: FontWeight.w600,
-                              color: Colors.orange,
+                              color: Color(0xFFFA931A),
                             ),
                           ),
                         ],
@@ -214,8 +215,8 @@ class _MyOrderState extends State<MyOrder> {
           "My Order",
           style: TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Poppins-SemiBold',
           ),
         ),
       ),

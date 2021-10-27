@@ -49,7 +49,7 @@ class _ReviewState extends State<Review> {
         ),
         child: Material(
           color: Colors.white,
-          elevation: 2,
+          elevation: 1,
           child: Padding(
             padding: EdgeInsets.all(context.dynamicHeight(0.02)),
             child: Column(
@@ -59,11 +59,11 @@ class _ReviewState extends State<Review> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Container(
-                      height: 100,
-                      width: 100,
+                      height: 80,
+                      width: 78,
                       decoration: const BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/kamera1.png"),
+                          image: AssetImage("assets/images/kamera1.png"),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -79,33 +79,35 @@ class _ReviewState extends State<Review> {
                 SizedBox(
                   height: context.dynamicHeight(0.01),
                 ),
-                Divider(
-                  height: context.dynamicHeight(0.01),
+                const Divider(
+                  thickness: 1,
                 ),
                 SizedBox(
                   height: context.dynamicHeight(0.01),
                 ),
                 Row(
                   children: [
-                    Icon(
-                      Icons.star_rounded,
-                      color: Color(0xFFDFB73E),
-                    ),
-                    Icon(
-                      Icons.star_rounded,
-                      color: Color(0xFFDFB73E),
-                    ),
-                    Icon(
-                      Icons.star_rounded,
-                      color: Color(0xFFDFB73E),
-                    ),
-                    Icon(
+                    Builder(builder: (context) {
+                      return const Icon(
+                        Icons.star_rounded,
+                        color: Color(0xFFDFB73E),
+                      );
+                    }),
+                    const Icon(
                       Icons.star_rounded,
                       color: Color(0xFFDFB73E),
                     ),
                     const Icon(
                       Icons.star_rounded,
-                      color: Colors.grey,
+                      color: Color(0xFFDFB73E),
+                    ),
+                    const Icon(
+                      Icons.star_rounded,
+                      color: Color(0xFFDFB73E),
+                    ),
+                    const Icon(
+                      Icons.star_rounded,
+                      color: Color(0xFF9496A4),
                     ),
                   ],
                 ),
@@ -132,13 +134,19 @@ class _ReviewState extends State<Review> {
                 SizedBox(
                   height: context.dynamicHeight(0.02),
                 ),
-                Divider(
-                  height: context.dynamicHeight(0.02),
+                const Divider(
+                  thickness: 1,
                 ),
                 SizedBox(
                   height: context.dynamicHeight(0.01),
                 ),
-                const Text("Status", style: kBlackNormal),
+                const Text("Status",
+                    style: TextStyle(
+                      fontFamily: 'Poppins-Regular',
+                      color: Colors.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
+                    )),
                 const Text("Under Review", style: kRedBold),
               ],
             ),

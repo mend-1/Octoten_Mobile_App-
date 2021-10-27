@@ -51,8 +51,8 @@ class _MyInformationNameState extends State<MyInformationName> {
           "Change Name",
           style: TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Poppins-SemiBold',
           ),
         ),
       ),
@@ -77,7 +77,11 @@ class _MyInformationNameState extends State<MyInformationName> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -106,7 +110,7 @@ class _MyInformationNameState extends State<MyInformationName> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'Poppins-Bold',
             ),
           );
         }),

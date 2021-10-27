@@ -20,13 +20,13 @@ class _FilterState extends State<Filter> {
         body: ListView(
           padding: EdgeInsets.symmetric(
               vertical: context.dynamicHeight(0.01),
-              horizontal: context.dynamicWidth(0.02)),
+              horizontal: context.dynamicWidth(0.01)),
           children: [
             paddingcategory(),
             buildPaddingbrand(),
             buildPaddingprice(),
             SizedBox(
-              height: context.dynamicHeight(0.03),
+              height: context.dynamicHeight(0.02),
             ),
             buildPaddingButton(),
           ],
@@ -35,7 +35,7 @@ class _FilterState extends State<Filter> {
 
   Padding paddingcategory() {
     return Padding(
-      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
+      padding: EdgeInsets.all(context.dynamicHeight(0.01)),
       child: ExpansionTile(
         title: const Text(
           "Category",
@@ -73,7 +73,7 @@ class _FilterState extends State<Filter> {
 
   Padding buildPaddingbrand() {
     return Padding(
-      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
+      padding: EdgeInsets.all(context.dynamicHeight(0.01)),
       child: ExpansionTile(
         title: const Text(
           "Brand",
@@ -111,7 +111,7 @@ class _FilterState extends State<Filter> {
 
   Padding buildPaddingprice() {
     return Padding(
-      padding: EdgeInsets.all(context.dynamicHeight(0.02)),
+      padding: EdgeInsets.all(context.dynamicHeight(0.01)),
       child: ExpansionTile(
         title: const Text(
           "Price",
@@ -121,39 +121,56 @@ class _FilterState extends State<Filter> {
         leading: const Icon(Icons.arrow_drop_up_outlined),
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Builder(builder: (context) {
                 return SizedBox(
-                  height: context.dynamicHeight(0.09),
-                  width: context.dynamicWidth(0.4),
+                  height: 40,
+                  width: context.dynamicWidth(0.45),
                   child: Padding(
                     padding: EdgeInsets.only(
                       left: context.dynamicHeight(0.03),
                       bottom: context.dynamicHeight(0.01),
                     ),
                     child: const TextField(
+                      keyboardType: TextInputType.number,
                       decoration: InputDecoration(
+                        prefixText: "\$ ",
+                        prefixStyle: kBlackBold,
+                        labelText: "Min. Price",
+                        labelStyle: TextStyle(
+                          fontFamily: 'Poppins-Regular',
+                          color: Colors.grey,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                        ),
                         border: OutlineInputBorder(),
-                        hintText: "\$"
-                            "  Min. Price",
                       ),
                     ),
                   ),
                 );
               }),
               SizedBox(
-                height: context.dynamicHeight(0.09),
-                width: context.dynamicWidth(0.4),
+                height: 40,
+                width: context.dynamicWidth(0.45),
                 child: Padding(
                   padding: EdgeInsets.only(
                     left: context.dynamicHeight(0.03),
                     bottom: context.dynamicHeight(0.01),
                   ),
                   child: const TextField(
+                    keyboardType: TextInputType.number,
                     decoration: InputDecoration(
+                      prefixText: "\$ ",
+                      prefixStyle: kBlackBold,
+                      labelText: "Max. Price",
+                      labelStyle: TextStyle(
+                        fontFamily: 'Poppins-Regular',
+                        color: Colors.grey,
+                        fontWeight: FontWeight.w400,
+                        fontSize: 14,
+                      ),
                       border: OutlineInputBorder(),
-                      hintText: "\$  Max. Price",
                     ),
                   ),
                 ),
@@ -171,10 +188,8 @@ class _FilterState extends State<Filter> {
       child: Align(
         alignment: Alignment.center,
         child: SizedBox(
-          //vertical: context.dynamicHeight(0.008),
-          //horizontal: context.dynamicWidth(0.1),
-          height: context.dynamicHeight(0.06),
-          width: context.dynamicWidth(0.50),
+          height: 40,
+          width: context.dynamicWidth(0.6),
           child: RaisedButton(
             onPressed: () {},
             shape: RoundedRectangleBorder(
@@ -187,6 +202,7 @@ class _FilterState extends State<Filter> {
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
                 fontSize: 14,
+                fontFamily: 'OpenSans-Bold',
               ),
             ),
           ),
@@ -242,7 +258,7 @@ class _FilterState extends State<Filter> {
         title: Text(
           notification.title,
           style: const TextStyle(
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-Regular',
             color: Colors.black,
             fontWeight: FontWeight.w400,
             fontSize: 14,

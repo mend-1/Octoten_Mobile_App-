@@ -37,8 +37,8 @@ class _SoryByState extends State<SoryBy> {
       child: Align(
         alignment: Alignment.center,
         child: SizedBox(
-          height: context.dynamicHeight(0.06),
-          width: context.dynamicWidth(0.50),
+          height: 40,
+          width: 250,
           child: RaisedButton(
             onPressed: () {},
             shape: RoundedRectangleBorder(
@@ -52,6 +52,7 @@ class _SoryByState extends State<SoryBy> {
                   return const Text(
                     "Apply",
                     style: TextStyle(
+                      fontFamily: "OpenSans",
                       color: Colors.white,
                       fontWeight: FontWeight.w700,
                       fontSize: 14,

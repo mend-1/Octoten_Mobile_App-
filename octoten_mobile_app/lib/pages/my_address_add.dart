@@ -70,7 +70,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-SemiBold',
           ),
         ),
       ),
@@ -95,7 +95,11 @@ class _MyAddressAddState extends State<MyAddressAdd> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Address Name",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -125,7 +129,11 @@ class _MyAddressAddState extends State<MyAddressAdd> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Name",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -155,7 +163,10 @@ class _MyAddressAddState extends State<MyAddressAdd> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "City",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -185,7 +196,10 @@ class _MyAddressAddState extends State<MyAddressAdd> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "District",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -210,6 +224,11 @@ class _MyAddressAddState extends State<MyAddressAdd> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Full Address",
+          hintStyle: TextStyle(
+            fontFamily: "Roboto-Regular",
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -238,7 +257,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'Poppins-Bold',
             ),
           );
         }),

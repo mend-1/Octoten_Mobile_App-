@@ -70,8 +70,8 @@ class _AddCreditCardState extends State<AddCreditCard> {
           "Add Credit Card",
           style: TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Poppins-SemiBold',
           ),
         ),
       ),
@@ -88,7 +88,6 @@ class _AddCreditCardState extends State<AddCreditCard> {
       height: 35,
       width: double.infinity,
       child: const TextField(
-        textAlignVertical: TextAlignVertical.center,
         style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
           border: OutlineInputBorder(
@@ -96,7 +95,10 @@ class _AddCreditCardState extends State<AddCreditCard> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name On Card",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -126,7 +128,10 @@ class _AddCreditCardState extends State<AddCreditCard> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Card Number",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -146,7 +151,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
         right: context.dynamicHeight(0.02),
       ),
       height: 35,
-      width: 165,
+      width: 155,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
         style: TextStyle(fontSize: 14.0, height: 1.0),
@@ -156,7 +161,10 @@ class _AddCreditCardState extends State<AddCreditCard> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "MM",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -176,7 +184,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
         right: context.dynamicHeight(0.02),
       ),
       height: 35,
-      width: 165,
+      width: 155,
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
         style: TextStyle(fontSize: 14.0, height: 1.0),
@@ -186,7 +194,10 @@ class _AddCreditCardState extends State<AddCreditCard> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "YY",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -216,7 +227,10 @@ class _AddCreditCardState extends State<AddCreditCard> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "CVC",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -245,7 +259,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'Poppins-Bold',
             ),
           );
         }),

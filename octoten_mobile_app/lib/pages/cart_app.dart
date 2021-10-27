@@ -14,8 +14,8 @@ class CartApp extends StatefulWidget {
 }
 
 class _CartAppState extends State<CartApp> {
-  String sec = "";
-  String secim = "";
+  String choose = "";
+  String choosee = "";
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class _CartAppState extends State<CartApp> {
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              buildPaddingDeliveryCard2(context),
+              buildPaddingDeliveryOption1(context),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
@@ -53,9 +53,405 @@ class _CartAppState extends State<CartApp> {
                 height: context.dynamicHeight(0.02),
               ),
               buildPaddingDeliveryCard2(context),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    buildContainerDiscountCode(context),
+                    buildSizedBoxApply(),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              const Divider(
+                thickness: 1,
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              buildPaddingTextCanonCameraPrice(),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              const Divider(
+                thickness: 1,
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              buildPaddingTextVacummCleanerPrice(),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              const Divider(
+                thickness: 1,
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              buildPaddingSubTotal(),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              buildPaddingShipping(),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              buildPaddingTaxes(),
+              SizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              const Divider(
+                thickness: 1,
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              buildPaddingTotal(),
+              SizedBox(
+                height: context.dynamicHeight(0.03),
+              ),
+              SizedBox(
+                height: 35,
+                width: 300,
+                child: RaisedButton(
+                  onPressed: () {},
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  color: const Color(0xFFEF3C4C),
+                  child: Builder(builder: (context) {
+                    return const Text(
+                      "Confirm Order",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14,
+                        fontFamily: 'Poppins-Bold',
+                      ),
+                    );
+                  }),
+                ),
+              ),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Padding buildPaddingTotal() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Builder(builder: (context) {
+            return const Text(
+              "Total",
+              style: kBlackNormal,
+            );
+          }),
+          const Text(
+            "\$2100",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.w600,
+              fontFamily: 'Poppins-Bold',
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding buildPaddingTaxes() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Builder(builder: (context) {
+            return const Text(
+              "Taxes",
+              style: kBlackNormal,
+            );
+          }),
+          const Text(
+            "\$50",
+            style: kBlackBold,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding buildPaddingShipping() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Builder(builder: (context) {
+            return const Text(
+              "Shipping",
+              style: kBlackNormal,
+            );
+          }),
+          const Text(
+            "\$50",
+            style: kBlackBold,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding buildPaddingSubTotal() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Builder(builder: (context) {
+            return const Text(
+              "Sub Total",
+              style: kBlackNormal,
+            );
+          }),
+          const Text(
+            "\$2000",
+            style: kBlackBold,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding buildPaddingTextVacummCleanerPrice() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Builder(builder: (context) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Vacuum Cleaner",
+                  style: kBlackNormal,
+                ),
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
+                ),
+                const Text(
+                  "2 Item",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
+                    fontFamily: 'Poppins-Regular',
+                    color: Color(0xFF9496A4),
+                  ),
+                ),
+              ],
+            );
+          }),
+          const Text(
+            "\$1000",
+            style: kBlackBold,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Padding buildPaddingTextCanonCameraPrice() {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, left: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Builder(builder: (context) {
+            return Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "Canon Camera",
+                  style: kBlackNormal,
+                ),
+                SizedBox(
+                  height: context.dynamicHeight(0.01),
+                ),
+                const Text(
+                  "5 Item",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 14,
+                    fontFamily: 'Poppins-Regular',
+                    color: Color(0xFF9496A4),
+                  ),
+                ),
+              ],
+            );
+          }),
+          const Text(
+            "\$1000",
+            style: kBlackBold,
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container buildContainerDiscountCode(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(
+        top: context.dynamicHeight(0.01),
+        left: context.dynamicHeight(0.02),
+        right: context.dynamicHeight(0.02),
+      ),
+      height: 35,
+      width: 200,
+      child: const TextField(
+        textAlignVertical: TextAlignVertical.center,
+        style: TextStyle(fontSize: 14.0, height: 1.0),
+        decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
+          ),
+          hintText: "Discount Code",
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
+          fillColor: Colors.white,
+          filled: true,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.all(Radius.circular(10)),
+            borderSide: BorderSide(color: Color(0xFFDFB73E), width: 1.0),
+          ),
+        ),
+      ),
+    );
+  }
+
+  SizedBox buildSizedBoxApply() {
+    return SizedBox(
+      height: 35,
+      width: 110,
+      child: RaisedButton(
+        onPressed: () {},
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        color: const Color(0xFFFA931A),
+        child: Builder(builder: (context) {
+          return const Text(
+            "Apply",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+              fontSize: 14,
+              fontFamily: 'Poppins-Bold',
+            ),
+          );
+        }),
+      ),
+    );
+  }
+
+  Padding buildPaddingDeliveryOption1(BuildContext context) {
+    return Padding(
+      padding: EdgeInsets.all(
+        context.dynamicHeight(0.01),
+      ),
+      child: Material(
+        color: Colors.white,
+        elevation: 1,
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: context.dynamicHeight(0.06),
+            right: context.dynamicHeight(0.06),
+            top: context.dynamicHeight(0.02),
+          ),
+          child: Column(
+            children: [
+              const Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  "Delivery Option",
+                  style: kBlackBold,
+                ),
+              ),
+              RadioListTile<String>(
+                value: "C",
+                groupValue: choosee,
+                activeColor: Colors.red,
+                onChanged: (deger) {
+                  setState(() {
+                    choosee = deger!;
+                    debugPrint("secilen deger: $deger");
+                  });
+                },
+                title: const Text(
+                  "Standard Cargo",
+                  style: kBlackBold,
+                ),
+                subtitle: const Text(
+                  "Delivery Date 22 Feb 2021",
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'Poppins-Regular',
+                  ),
+                ),
+                secondary: const Text(
+                  "\$50",
+                  style: kBlackBold,
+                ),
+              ),
+              RadioListTile<String>(
+                value: "D",
+                groupValue: choosee,
+                activeColor: Colors.red,
+                onChanged: (deger) {
+                  setState(() {
+                    choosee = deger!;
+                    debugPrint("secilen deger: $deger");
+                  });
+                },
+                title: const Text(
+                  "Fast Cargo",
+                  style: kBlackBold,
+                ),
+                subtitle: const Text(
+                  "Delivery Date 22 Feb 2021",
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w400,
+                    fontFamily: 'Poppins-Regular',
+                  ),
+                ),
+                secondary: GestureDetector(
+                  onTap: () {},
+                  child: const Text(
+                    "\$100",
+                    style: kBlackBold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -74,7 +470,7 @@ class _CartAppState extends State<CartApp> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                fontFamily: "Poppins",
+                fontFamily: "Poppins-SemiBold",
               ),
             );
           }),
@@ -98,7 +494,7 @@ class _CartAppState extends State<CartApp> {
             width: 80,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/kamera1.png"),
+                image: AssetImage("assets/images/kamera1.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -114,7 +510,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
-                    fontFamily: "Poppins",
+                    fontFamily: "Poppins-Regular",
                   ),
                 ),
               ),
@@ -126,7 +522,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    fontFamily: "Poppins",
+                    fontFamily: "Poppins-SemiBold",
                   ),
                 ),
               ),
@@ -141,8 +537,8 @@ class _CartAppState extends State<CartApp> {
                 onPressed: () {},
                 icon: const Icon(
                   Icons.clear,
-                  color: Colors.grey,
-                  size: 33,
+                  color: Color(0xFF9496A4),
+                  size: 30,
                 )),
           ),
         ],
@@ -161,7 +557,7 @@ class _CartAppState extends State<CartApp> {
               onPressed: () {},
               icon: const Icon(
                 Icons.remove,
-                color: Colors.grey,
+                color: Color(0xFF9496A4),
               )),
         ),
         SizedBox(
@@ -175,7 +571,7 @@ class _CartAppState extends State<CartApp> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                fontFamily: "Poppins",
+                fontFamily: "Poppins-Regular",
               ),
             ),
           ),
@@ -189,7 +585,7 @@ class _CartAppState extends State<CartApp> {
               onPressed: () {},
               icon: const Icon(
                 Icons.add,
-                color: Colors.grey,
+                color: Color(0xFF9496A4),
               )),
         ),
       ],
@@ -203,7 +599,7 @@ class _CartAppState extends State<CartApp> {
         right: context.dynamicHeight(0.01),
       ),
       child: const Divider(
-        height: 5,
+        thickness: 1,
       ),
     );
   }
@@ -222,7 +618,7 @@ class _CartAppState extends State<CartApp> {
             width: 80,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/vacuum.png"),
+                image: AssetImage("assets/images/vacuum.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -238,7 +634,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
-                    fontFamily: "Poppins",
+                    fontFamily: "Poppins-Regular",
                   ),
                 ),
               ),
@@ -250,7 +646,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    fontFamily: "Poppins",
+                    fontFamily: "Poppins-SemiBold",
                   ),
                 ),
               ),
@@ -265,8 +661,8 @@ class _CartAppState extends State<CartApp> {
                 onPressed: () {},
                 icon: const Icon(
                   Icons.clear,
-                  color: Colors.grey,
-                  size: 33,
+                  color: Color(0xFF9496A4),
+                  size: 30,
                 )),
           ),
         ],
@@ -285,7 +681,7 @@ class _CartAppState extends State<CartApp> {
               onPressed: () {},
               icon: const Icon(
                 Icons.remove,
-                color: Colors.grey,
+                color: Color(0xFF9496A4),
               )),
         ),
         SizedBox(
@@ -299,7 +695,7 @@ class _CartAppState extends State<CartApp> {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                fontFamily: "Poppins",
+                fontFamily: "Poppins-Regular",
               ),
             ),
           ),
@@ -313,7 +709,7 @@ class _CartAppState extends State<CartApp> {
               onPressed: () {},
               icon: const Icon(
                 Icons.add,
-                color: Colors.grey,
+                color: Color(0xFF9496A4),
               )),
         ),
       ],
@@ -345,11 +741,11 @@ class _CartAppState extends State<CartApp> {
               ),
               RadioListTile<String>(
                 value: "A",
-                groupValue: sec,
+                groupValue: choose,
                 activeColor: Colors.red,
                 onChanged: (deger) {
                   setState(() {
-                    sec = deger!;
+                    choose = deger!;
                     debugPrint("secilen deger: $deger");
                   });
                 },
@@ -362,6 +758,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w400,
+                    fontFamily: 'Poppins-Regular',
                   ),
                 ),
                 secondary: const Text(
@@ -371,11 +768,11 @@ class _CartAppState extends State<CartApp> {
               ),
               RadioListTile<String>(
                 value: "B",
-                groupValue: sec,
+                groupValue: choose,
                 activeColor: Colors.red,
                 onChanged: (deger) {
                   setState(() {
-                    sec = deger!;
+                    choose = deger!;
                     debugPrint("secilen deger: $deger");
                   });
                 },
@@ -388,6 +785,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w400,
+                    fontFamily: 'Poppins-Regular',
                   ),
                 ),
                 secondary: GestureDetector(

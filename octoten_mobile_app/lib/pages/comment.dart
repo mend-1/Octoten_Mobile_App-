@@ -37,7 +37,9 @@ class _CommentState extends State<Comment> {
               ),
               const Padding(
                 padding: EdgeInsets.only(left: 13.0, right: 13.0),
-                child: Divider(),
+                child: Divider(
+                  thickness: 1,
+                ),
               ),
               rating(context),
               SizedBox(
@@ -69,10 +71,10 @@ class _CommentState extends State<Comment> {
         children: [
           Container(
             height: 80,
-            width: 80,
+            width: 78,
             decoration: const BoxDecoration(
               image: DecorationImage(
-                image: AssetImage("assets/kamera1.png"),
+                image: AssetImage("assets/images/kamera1.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -140,6 +142,11 @@ class _CommentState extends State<Comment> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Review",
+          hintStyle: TextStyle(
+            fontFamily: "Roboto-Regular",
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -168,7 +175,7 @@ class _CommentState extends State<Comment> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'Poppins-Bold',
             ),
           );
         }),

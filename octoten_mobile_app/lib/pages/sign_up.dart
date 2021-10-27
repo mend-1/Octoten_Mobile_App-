@@ -93,7 +93,7 @@ class _Sign_UpState extends State<Sign_Up> {
           width: 50,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/octoten.png"),
+              image: AssetImage("assets/images/octoten.png"),
               fit: BoxFit.cover,
             ),
           ),
@@ -110,8 +110,8 @@ class _Sign_UpState extends State<Sign_Up> {
                     style: TextStyle(
                       fontFamily: 'Poppins',
                       color: Colors.black,
-                      fontWeight: FontWeight.w900,
-                      fontSize: 25,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 24,
                       letterSpacing: 2,
                     ));
               }),
@@ -130,7 +130,7 @@ class _Sign_UpState extends State<Sign_Up> {
           Builder(builder: (context) {
             return const Text("Sign Up",
                 style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Poppins-SemiBold',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -143,31 +143,31 @@ class _Sign_UpState extends State<Sign_Up> {
 
   SizedBox buildSizedBoxApple(BuildContext context) {
     return SizedBox(
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        color: Colors.grey.shade300,
+        color: const Color(0xFFE5E5E5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: context.dynamicHeight(0.04),
               child: const Image(
-                image: AssetImage("assets/apple.png"),
+                image: AssetImage("assets/images/apple.png"),
               ),
             ),
             SizedBox(
               width: context.dynamicWidth(0.02),
             ),
-            Text(
+            const Text(
               "Sign Up With Apple",
               style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Colors.black.withOpacity(0.50),
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
@@ -180,31 +180,31 @@ class _Sign_UpState extends State<Sign_Up> {
 
   SizedBox buildSizedBoxGoogle(BuildContext context) {
     return SizedBox(
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        color: Colors.grey.shade300,
+        color: const Color(0xFFE5E5E5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: context.dynamicHeight(0.036),
               child: const Image(
-                image: AssetImage("assets/google.png"),
+                image: AssetImage("assets/images/google.png"),
               ),
             ),
             SizedBox(
               width: context.dynamicWidth(0.02),
             ),
-            Text(
+            const Text(
               "Sign Up With Google",
               style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Colors.black.withOpacity(0.50),
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
@@ -217,31 +217,31 @@ class _Sign_UpState extends State<Sign_Up> {
 
   SizedBox buildSizedBoxFacebook(BuildContext context) {
     return SizedBox(
-      height: context.dynamicHeight(0.05),
+      height: 35,
       width: double.infinity,
       child: RaisedButton(
         onPressed: () {},
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
         ),
-        color: Colors.grey.shade300,
+        color: const Color(0xFFE5E5E5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
               height: context.dynamicHeight(0.04),
               child: const Image(
-                image: AssetImage("assets/facebook.png"),
+                image: AssetImage("assets/images/facebook.png"),
               ),
             ),
             SizedBox(
               width: context.dynamicWidth(0.02),
             ),
-            Text(
+            const Text(
               "Sign Up With Facebook",
               style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Colors.black.withOpacity(0.50),
+                fontFamily: 'Poppins-Regular',
+                color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
               ),
@@ -260,7 +260,7 @@ class _Sign_UpState extends State<Sign_Up> {
           Builder(builder: (context) {
             return const Text("Or",
                 style: TextStyle(
-                  fontFamily: 'Poppins',
+                  fontFamily: 'Poppins-SemiBold',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -284,7 +284,11 @@ class _Sign_UpState extends State<Sign_Up> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -309,7 +313,11 @@ class _Sign_UpState extends State<Sign_Up> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Email",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -334,7 +342,11 @@ class _Sign_UpState extends State<Sign_Up> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Phone Number",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -360,8 +372,11 @@ class _Sign_UpState extends State<Sign_Up> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
-          hintStyle:
-              const TextStyle(fontSize: 14, color: const Color(0xFFB3B1B1)),
+          hintStyle: const TextStyle(
+            fontSize: 14,
+            color: Color(0xFFB3B1B1),
+            fontFamily: "Roboto-Regular",
+          ),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: const OutlineInputBorder(
@@ -398,7 +413,7 @@ class _Sign_UpState extends State<Sign_Up> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'OpenSans-Bold',
             ),
           );
         }),
@@ -492,7 +507,7 @@ class _Sign_UpState extends State<Sign_Up> {
         title: Text(
           notification.title,
           style: const TextStyle(
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-Regular',
             color: Colors.grey,
             fontWeight: FontWeight.w400,
             fontSize: 10,

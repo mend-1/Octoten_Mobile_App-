@@ -66,8 +66,8 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           "Change Email",
           style: TextStyle(
             fontSize: 16,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Poppins',
+            fontWeight: FontWeight.w600,
+            fontFamily: 'Poppins-SemiBold',
           ),
         ),
       ),
@@ -92,7 +92,10 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Email",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -111,7 +114,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
         right: context.dynamicHeight(0.02),
       ),
       height: 35,
-      width: 250,
+      width: context.dynamicWidth(0.45),
       child: const TextField(
         textAlignVertical: TextAlignVertical.center,
         style: TextStyle(fontSize: 14.0, height: 1.0),
@@ -121,7 +124,10 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Conformation Code",
-          hintStyle: TextStyle(fontSize: 14, color: Color(0xFFB3B1B1)),
+          hintStyle: TextStyle(
+              fontFamily: "Roboto-Regular",
+              fontSize: 14,
+              color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
           enabledBorder: OutlineInputBorder(
@@ -143,9 +149,9 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
         child: Text(
           "Send Code",
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Poppins',
+            fontSize: 14,
+            fontWeight: FontWeight.w400,
+            fontFamily: 'Poppins-Regular',
             color: Color(0xFFEF3C4C),
           ),
         ),
@@ -166,7 +172,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 10,
-            fontFamily: 'Poppins',
+            fontFamily: 'Poppins-Regular',
             color: Colors.grey.shade500,
           ),
         ),
@@ -191,7 +197,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins',
+              fontFamily: 'Poppins-Bold',
             ),
           );
         }),
