@@ -52,7 +52,7 @@ class _CartAppState extends State<CartApp> {
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildPaddingDeliveryCard2(context),
+              buildPaddingDeliveryOption2(context),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
@@ -118,31 +118,38 @@ class _CartAppState extends State<CartApp> {
               SizedBox(
                 height: context.dynamicHeight(0.03),
               ),
+              buildSizedBoxConfirmButton(),
               SizedBox(
-                height: 35,
-                width: 300,
-                child: RaisedButton(
-                  onPressed: () {},
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  color: const Color(0xFFEF3C4C),
-                  child: Builder(builder: (context) {
-                    return const Text(
-                      "Confirm Order",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                        fontFamily: 'Poppins-Bold',
-                      ),
-                    );
-                  }),
-                ),
+                height: context.dynamicHeight(0.03),
               ),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  SizedBox buildSizedBoxConfirmButton() {
+    return SizedBox(
+      height: 35,
+      width: 300,
+      child: RaisedButton(
+        onPressed: () {},
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        color: const Color(0xFFEF3C4C),
+        child: Builder(builder: (context) {
+          return const Text(
+            "Confirm Order",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+              fontSize: 14,
+              fontFamily: 'Poppins-Bold.ttf',
+            ),
+          );
+        }),
       ),
     );
   }
@@ -162,9 +169,9 @@ class _CartAppState extends State<CartApp> {
           const Text(
             "\$2100",
             style: TextStyle(
-              fontSize: 24,
+              fontSize: 36,
               fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins-Bold.ttf',
             ),
           ),
         ],
@@ -186,7 +193,11 @@ class _CartAppState extends State<CartApp> {
           }),
           const Text(
             "\$50",
-            style: kBlackBold,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              fontFamily: 'Poppins-Regular.ttf',
+            ),
           ),
         ],
       ),
@@ -207,7 +218,11 @@ class _CartAppState extends State<CartApp> {
           }),
           const Text(
             "\$50",
-            style: kBlackBold,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              fontFamily: 'Poppins-Regular.ttf',
+            ),
           ),
         ],
       ),
@@ -228,7 +243,11 @@ class _CartAppState extends State<CartApp> {
           }),
           const Text(
             "\$2000",
-            style: kBlackBold,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              fontFamily: 'Poppins-Regular.ttf',
+            ),
           ),
         ],
       ),
@@ -266,7 +285,11 @@ class _CartAppState extends State<CartApp> {
           }),
           const Text(
             "\$1000",
-            style: kBlackBold,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              fontFamily: 'Poppins-Regular.ttf',
+            ),
           ),
         ],
       ),
@@ -304,7 +327,11 @@ class _CartAppState extends State<CartApp> {
           }),
           const Text(
             "\$1000",
-            style: kBlackBold,
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              fontFamily: 'Poppins-Regular.ttf',
+            ),
           ),
         ],
       ),
@@ -330,7 +357,7 @@ class _CartAppState extends State<CartApp> {
           ),
           hintText: "Discount Code",
           hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
+              fontFamily: "Poppins-Regular.ttf",
               fontSize: 14,
               color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
@@ -361,7 +388,7 @@ class _CartAppState extends State<CartApp> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins-Bold.ttf',
             ),
           );
         }),
@@ -393,7 +420,7 @@ class _CartAppState extends State<CartApp> {
                 ),
               ),
               RadioListTile<String>(
-                value: "C",
+                value: "A",
                 groupValue: choosee,
                 activeColor: Colors.red,
                 onChanged: (deger) {
@@ -420,7 +447,7 @@ class _CartAppState extends State<CartApp> {
                 ),
               ),
               RadioListTile<String>(
-                value: "D",
+                value: "B",
                 groupValue: choosee,
                 activeColor: Colors.red,
                 onChanged: (deger) {
@@ -716,7 +743,7 @@ class _CartAppState extends State<CartApp> {
     );
   }
 
-  Padding buildPaddingDeliveryCard2(BuildContext context) {
+  Padding buildPaddingDeliveryOption2(BuildContext context) {
     return Padding(
       padding: EdgeInsets.all(
         context.dynamicHeight(0.01),

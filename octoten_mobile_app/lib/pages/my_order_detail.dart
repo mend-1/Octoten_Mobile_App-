@@ -60,9 +60,312 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               textbenyeder(),
               textbillingaddres(),
               textbenyeder(),
+              SizedBox(
+                height: context.dynamicHeight(0.03),
+              ),
+              buildAlignPayment(),
+              buildAlignNumberCard(),
+              SizedBox(
+                height: context.dynamicHeight(0.03),
+              ),
+              buildAlignTable(),
+              SizedBox(
+                height: context.dynamicHeight(0.03),
+              ),
+              buildAlignCargoTracking(),
+              SizedBox(
+                height: context.dynamicHeight(0.01),
+              ),
+              buildAlignFeedex(),
             ],
           ),
         ],
+      ),
+    );
+  }
+
+  Align buildAlignFeedex() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "Feedex\n"
+          "#FX121725112",
+          style: TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+            fontFamily: 'Poppins-Regular.ttf',
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align buildAlignCargoTracking() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "Cargo Tracking",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            fontFamily: 'Poppins-SemiBold.ttf',
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align buildAlignTable() {
+    return Align(
+      alignment: Alignment.topLeft,
+      child: Container(
+        margin: const EdgeInsets.only(left: 0, top: 10, bottom: 15),
+        child: Table(
+          defaultColumnWidth: const FixedColumnWidth(120.0),
+          border: TableBorder.all(
+            color: Colors.grey,
+            style: BorderStyle.solid,
+            width: 1,
+          ),
+          children: [
+            TableRow(children: [
+              Column(children: []),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Payment Amount',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 9,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Total Amount',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 9,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+            ]),
+            TableRow(children: [
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '3',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '\$1000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-SemiBold.ttf',
+                    ),
+                  ),
+                )
+              ]),
+            ]),
+            TableRow(children: [
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '6',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '\$500',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-SemiBold.ttf',
+                    ),
+                  ),
+                )
+              ]),
+            ]),
+            TableRow(children: [
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '9',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '\$250',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-Regular.ttf',
+                    ),
+                  ),
+                )
+              ]),
+              Column(children: [
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins-SemiBold.ttf',
+                    ),
+                  ),
+                )
+              ]),
+            ]),
+            TableRow(
+              children: [
+                Column(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      '12',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        fontFamily: 'Poppins-Regular.ttf',
+                      ),
+                    ),
+                  )
+                ]),
+                Column(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      '\$125',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        fontFamily: 'Poppins-Regular.ttf',
+                      ),
+                    ),
+                  )
+                ]),
+                Column(children: [
+                  Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: Text(
+                      '\$3000',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                        fontFamily: 'Poppins-SemiBold.ttf',
+                      ),
+                    ),
+                  )
+                ]),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Align buildAlignNumberCard() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "5406 **** **** 3333\n"
+          "Garanti Bankası - Bonus",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            fontFamily: 'Poppins-Regular.ttf',
+            color: Color(0xFF232F3E),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Align buildAlignPayment() {
+    return const Align(
+      alignment: Alignment.topLeft,
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Text(
+          "Payment ınformation",
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+            fontFamily: 'Poppins-SemiBold.ttf',
+            color: Color(0xFF232F3E),
+          ),
+        ),
       ),
     );
   }
