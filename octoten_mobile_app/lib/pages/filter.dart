@@ -44,7 +44,7 @@ class _FilterState extends State<Filter> {
         collapsedIconColor: Colors.black,
         children: [
           SizedBox(
-            height: context.dynamicHeight(0.25),
+            height: context.dynamicHeight(0.3),
             width: MediaQuery.of(context).size.width,
             child: ListView(
               reverse: true,
@@ -82,7 +82,7 @@ class _FilterState extends State<Filter> {
         collapsedIconColor: Colors.black,
         children: [
           SizedBox(
-            height: context.dynamicHeight(0.25),
+            height: context.dynamicHeight(0.3),
             width: MediaQuery.of(context).size.width,
             child: ListView(
               reverse: true,
@@ -139,7 +139,7 @@ class _FilterState extends State<Filter> {
                         prefixStyle: kBlackBold,
                         labelText: "Min. Price",
                         labelStyle: TextStyle(
-                          fontFamily: 'Poppins-Regular',
+                          fontFamily: 'Poppins',
                           color: Colors.grey,
                           fontWeight: FontWeight.w400,
                           fontSize: 14,
@@ -165,7 +165,7 @@ class _FilterState extends State<Filter> {
                       prefixStyle: kBlackBold,
                       labelText: "Max. Price",
                       labelStyle: TextStyle(
-                        fontFamily: 'Poppins-Regular',
+                        fontFamily: 'Poppins',
                         color: Colors.grey,
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -202,7 +202,7 @@ class _FilterState extends State<Filter> {
                 color: Colors.white,
                 fontWeight: FontWeight.w700,
                 fontSize: 14,
-                fontFamily: 'OpenSans-Bold',
+                fontFamily: 'OpenSans',
               ),
             ),
           ),
@@ -258,7 +258,7 @@ class _FilterState extends State<Filter> {
         title: Text(
           notification.title,
           style: const TextStyle(
-            fontFamily: 'Poppins-Regular',
+            fontFamily: 'Poppins',
             color: Colors.black,
             fontWeight: FontWeight.w400,
             fontSize: 14,

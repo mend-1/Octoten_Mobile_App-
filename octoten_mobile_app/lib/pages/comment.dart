@@ -35,9 +35,11 @@ class _CommentState extends State<Comment> {
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 13.0, right: 13.0),
-                child: Divider(
+              Padding(
+                padding: EdgeInsets.only(
+                    left: context.dynamicHeight(0.01),
+                    right: context.dynamicHeight(0.01)),
+                child: const Divider(
                   thickness: 1,
                 ),
               ),
@@ -143,7 +145,7 @@ class _CommentState extends State<Comment> {
           ),
           hintText: "Your Review",
           hintStyle: TextStyle(
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
             fontSize: 14,
             fontWeight: FontWeight.w400,
           ),
@@ -175,7 +177,7 @@ class _CommentState extends State<Comment> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins',
             ),
           );
         }),

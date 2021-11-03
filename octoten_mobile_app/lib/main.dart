@@ -35,7 +35,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.orange),
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+      ),
       home: const Mains(),
     );
   }

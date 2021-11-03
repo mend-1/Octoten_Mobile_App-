@@ -130,7 +130,7 @@ class _Sign_UpState extends State<Sign_Up> {
           Builder(builder: (context) {
             return const Text("Sign Up",
                 style: TextStyle(
-                  fontFamily: 'Poppins-SemiBold',
+                  fontFamily: 'Poppins',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -166,7 +166,7 @@ class _Sign_UpState extends State<Sign_Up> {
             const Text(
               "Sign Up With Apple",
               style: TextStyle(
-                fontFamily: 'Poppins-Regular',
+                fontFamily: 'Poppins',
                 color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -203,7 +203,7 @@ class _Sign_UpState extends State<Sign_Up> {
             const Text(
               "Sign Up With Google",
               style: TextStyle(
-                fontFamily: 'Poppins-Regular',
+                fontFamily: 'Poppins',
                 color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -240,7 +240,7 @@ class _Sign_UpState extends State<Sign_Up> {
             const Text(
               "Sign Up With Facebook",
               style: TextStyle(
-                fontFamily: 'Poppins-Regular',
+                fontFamily: 'Poppins',
                 color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -260,7 +260,7 @@ class _Sign_UpState extends State<Sign_Up> {
           Builder(builder: (context) {
             return const Text("Or",
                 style: TextStyle(
-                  fontFamily: 'Poppins-SemiBold',
+                  fontFamily: 'Poppins',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -276,22 +276,23 @@ class _Sign_UpState extends State<Sign_Up> {
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
       height: 35,
       width: double.infinity,
-      child: const TextField(
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+      child: TextField(
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name",
-          hintStyle: TextStyle(
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -305,22 +306,23 @@ class _Sign_UpState extends State<Sign_Up> {
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
       height: 35,
       width: double.infinity,
-      child: const TextField(
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+      child: TextField(
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Email",
-          hintStyle: TextStyle(
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -334,22 +336,23 @@ class _Sign_UpState extends State<Sign_Up> {
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
       height: 35,
       width: double.infinity,
-      child: const TextField(
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+      child: TextField(
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Phone Number",
-          hintStyle: TextStyle(
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -372,10 +375,11 @@ class _Sign_UpState extends State<Sign_Up> {
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
           hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
@@ -413,7 +417,7 @@ class _Sign_UpState extends State<Sign_Up> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'OpenSans-Bold',
+              fontFamily: 'OpenSans',
             ),
           );
         }),
@@ -459,9 +463,10 @@ class _Sign_UpState extends State<Sign_Up> {
 
   final notifications = [
     NotificationSetting(
-        title: 'I would like to receive electronic messages'
-            ' within the scope\n of Consent Text to be'
-            ' informed about important campaigns.'),
+      title: 'I would like to receive electronic messages'
+          ' within the scope of Consent Text to be'
+          ' informed about important campaigns.',
+    ),
   ];
 
   Widget buildToggleCheckbox(NotificationSetting notification) => buildCheckbox(
@@ -507,7 +512,7 @@ class _Sign_UpState extends State<Sign_Up> {
         title: Text(
           notification.title,
           style: const TextStyle(
-            fontFamily: 'Poppins-Regular',
+            fontFamily: 'Poppins',
             color: Colors.grey,
             fontWeight: FontWeight.w400,
             fontSize: 10,

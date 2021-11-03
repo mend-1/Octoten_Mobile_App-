@@ -67,7 +67,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -83,22 +83,21 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Email",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -115,22 +114,21 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
       ),
       height: 35,
       width: context.dynamicWidth(0.45),
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Conformation Code",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -151,7 +149,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w400,
-            fontFamily: 'Poppins-Regular',
+            fontFamily: 'Poppins',
             color: Color(0xFFEF3C4C),
           ),
         ),
@@ -172,7 +170,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
           style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 10,
-            fontFamily: 'Poppins-Regular',
+            fontFamily: 'Poppins',
             color: Colors.grey.shade500,
           ),
         ),
@@ -197,7 +195,7 @@ class _MyInformationChangeEmailState extends State<MyInformationChangeEmail> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins',
             ),
           );
         }),

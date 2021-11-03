@@ -71,7 +71,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -87,21 +87,20 @@ class _AddCreditCardState extends State<AddCreditCard> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+      child: TextField(
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Name On Card",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -119,22 +118,21 @@ class _AddCreditCardState extends State<AddCreditCard> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Card Number",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -152,22 +150,21 @@ class _AddCreditCardState extends State<AddCreditCard> {
       ),
       height: 35,
       width: 155,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "MM",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -185,22 +182,21 @@ class _AddCreditCardState extends State<AddCreditCard> {
       ),
       height: 35,
       width: 155,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "YY",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -218,22 +214,21 @@ class _AddCreditCardState extends State<AddCreditCard> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "CVC",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -259,7 +254,7 @@ class _AddCreditCardState extends State<AddCreditCard> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins',
             ),
           );
         }),

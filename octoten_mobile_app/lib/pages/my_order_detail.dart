@@ -28,9 +28,11 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
           Column(
             children: [
               buildPaddingCard(context),
-              const Padding(
-                padding: EdgeInsets.only(left: 13, right: 13),
-                child: Divider(
+              Padding(
+                padding: EdgeInsets.only(
+                    left: context.dynamicHeight(0.02),
+                    right: context.dynamicHeight(0.02)),
+                child: const Divider(
                   thickness: 1,
                 ),
               ),
@@ -39,9 +41,11 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 13, right: 13),
-                child: Divider(
+              Padding(
+                padding: EdgeInsets.only(
+                    left: context.dynamicHeight(0.02),
+                    right: context.dynamicHeight(0.02)),
+                child: const Divider(
                   thickness: 1,
                 ),
               ),
@@ -50,9 +54,11 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 13, right: 13),
-                child: Divider(
+              Padding(
+                padding: EdgeInsets.only(
+                    left: context.dynamicHeight(0.02),
+                    right: context.dynamicHeight(0.02)),
+                child: const Divider(
                   thickness: 1,
                 ),
               ),
@@ -68,15 +74,15 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
               SizedBox(
                 height: context.dynamicHeight(0.03),
               ),
-              buildAlignTable(),
+              buildStackTable(context),
               SizedBox(
                 height: context.dynamicHeight(0.03),
               ),
               buildAlignCargoTracking(),
-              SizedBox(
-                height: context.dynamicHeight(0.01),
-              ),
               buildAlignFeedex(),
+              SizedBox(
+                height: context.dynamicHeight(0.03),
+              ),
             ],
           ),
         ],
@@ -84,18 +90,237 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
     );
   }
 
+  Stack buildStackTable(BuildContext context) {
+    return Stack(
+      alignment: Alignment.topLeft,
+      children: [
+        const Align(
+          alignment: Alignment.topLeft,
+          child: Image(
+            image: AssetImage("assets/images/Rectangle.png"),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(
+            left: context.dynamicHeight(0.04),
+            right: context.dynamicHeight(0.03),
+            top: context.dynamicHeight(0.02),
+          ),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Payment Amount',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 9,
+                      fontFamily: 'Poppins',
+                      color: Color(0xFF9496A4),
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.13),
+                  ),
+                  const Text(
+                    'Total Amount',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 9,
+                      fontFamily: 'Poppins',
+                      color: Color(0xFF9496A4),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.02),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Text(
+                    '3',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$1000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ],
+              ),
+              Divider(
+                thickness: 1,
+                endIndent: context.dynamicWidth(0.2),
+                indent: context.dynamicWidth(0.01),
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.001),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Text(
+                    '6',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$500',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ],
+              ),
+              Divider(
+                thickness: 1,
+                endIndent: context.dynamicWidth(0.2),
+                indent: context.dynamicWidth(0.01),
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.001),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Text(
+                    '9',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$250',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ],
+              ),
+              Divider(
+                thickness: 1,
+                endIndent: context.dynamicWidth(0.2),
+                indent: context.dynamicWidth(0.01),
+              ),
+              SizedBox(
+                height: context.dynamicHeight(0.001),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const Text(
+                    '12',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$125',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                  SizedBox(
+                    width: context.dynamicWidth(0.2),
+                  ),
+                  const Text(
+                    '\$3000',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14,
+                      fontFamily: 'Poppins',
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
   Align buildAlignFeedex() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "Feedex\n"
           "#FX121725112",
           style: TextStyle(
             fontWeight: FontWeight.w400,
             fontSize: 14,
-            fontFamily: 'Poppins-Regular.ttf',
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -103,248 +328,34 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
   }
 
   Align buildAlignCargoTracking() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "Cargo Tracking",
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            fontFamily: 'Poppins-SemiBold.ttf',
+            fontFamily: 'Poppins',
           ),
-        ),
-      ),
-    );
-  }
-
-  Align buildAlignTable() {
-    return Align(
-      alignment: Alignment.topLeft,
-      child: Container(
-        margin: const EdgeInsets.only(left: 0, top: 10, bottom: 15),
-        child: Table(
-          defaultColumnWidth: const FixedColumnWidth(120.0),
-          border: TableBorder.all(
-            color: Colors.grey,
-            style: BorderStyle.solid,
-            width: 1,
-          ),
-          children: [
-            TableRow(children: [
-              Column(children: []),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Payment Amount',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 9,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Total Amount',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 9,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-            ]),
-            TableRow(children: [
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '3',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '\$1000',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '\$3000',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-SemiBold.ttf',
-                    ),
-                  ),
-                )
-              ]),
-            ]),
-            TableRow(children: [
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '6',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '\$500',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '\$3000',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-SemiBold.ttf',
-                    ),
-                  ),
-                )
-              ]),
-            ]),
-            TableRow(children: [
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '9',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '\$250',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-Regular.ttf',
-                    ),
-                  ),
-                )
-              ]),
-              Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(5.0),
-                  child: Text(
-                    '\$3000',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 14,
-                      fontFamily: 'Poppins-SemiBold.ttf',
-                    ),
-                  ),
-                )
-              ]),
-            ]),
-            TableRow(
-              children: [
-                Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Text(
-                      '12',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        fontFamily: 'Poppins-Regular.ttf',
-                      ),
-                    ),
-                  )
-                ]),
-                Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Text(
-                      '\$125',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        fontFamily: 'Poppins-Regular.ttf',
-                      ),
-                    ),
-                  )
-                ]),
-                Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.all(5.0),
-                    child: Text(
-                      '\$3000',
-                      style: TextStyle(
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        fontFamily: 'Poppins-SemiBold.ttf',
-                      ),
-                    ),
-                  )
-                ]),
-              ],
-            ),
-          ],
         ),
       ),
     );
   }
 
   Align buildAlignNumberCard() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "5406 **** **** 3333\n"
           "Garanti Bankası - Bonus",
           style: TextStyle(
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w400,
             fontSize: 14,
-            fontFamily: 'Poppins-Regular.ttf',
+            fontFamily: 'Poppins',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -353,16 +364,16 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
   }
 
   Align buildAlignPayment() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "Payment ınformation",
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            fontFamily: 'Poppins-SemiBold.ttf',
+            fontFamily: 'Poppins',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -406,7 +417,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Status",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins-Regular',
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -435,7 +446,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Delivery Adress",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins-Regular',
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -447,7 +458,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                       "Home",
                       style: TextStyle(
                         fontSize: 14,
-                        fontFamily: 'Poppins-SemiBold',
+                        fontFamily: 'Poppins',
                         fontWeight: FontWeight.w600,
                         color: Color(0xFFFAD61A),
                       ),
@@ -464,7 +475,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Total Price",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins-Regular',
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -488,7 +499,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                         "Order Date",
                         style: TextStyle(
                           fontSize: 10,
-                          fontFamily: 'Poppins-Regular',
+                          fontFamily: 'Poppins',
                           fontWeight: FontWeight.w400,
                         ),
                       );
@@ -552,7 +563,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        fontFamily: 'Poppins-Regular',
+                        fontFamily: 'Poppins',
                         color: Color(0xFF9496A4),
                       ),
                     ),
@@ -590,7 +601,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins-Bold',
+                    fontFamily: 'Poppins',
                   ),
                 );
               }),
@@ -613,7 +624,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Color(0xFFEF3C4C),
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins-Bold',
+                    fontFamily: 'Poppins',
                   ),
                 );
               }),
@@ -666,7 +677,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                       style: TextStyle(
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
-                        fontFamily: 'Poppins-Regular',
+                        fontFamily: 'Poppins',
                         color: Color(0xFF9496A4),
                       ),
                     ),
@@ -704,7 +715,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Colors.white,
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins-Bold',
+                    fontFamily: 'Poppins',
                   ),
                 );
               }),
@@ -727,7 +738,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
                     color: Color(0xFFEF3C4C),
                     fontWeight: FontWeight.w700,
                     fontSize: 14,
-                    fontFamily: 'Poppins-Bold',
+                    fontFamily: 'Poppins',
                   ),
                 );
               }),
@@ -739,16 +750,16 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
   }
 
   Align textdeliveryaddress() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "Delivery Address",
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -757,11 +768,11 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
   }
 
   Align textbenyeder() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "Ben Yeder\n"
           "0 532 202 40 59\n"
           "Avrupa Konutları TEM Sitesi."
@@ -771,7 +782,7 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
             fontWeight: FontWeight.w400,
             fontSize: 14,
             fontStyle: FontStyle.normal,
-            fontFamily: 'Poppins-Regular',
+            fontFamily: 'Poppins',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -780,16 +791,16 @@ class _MyOrderDetailState extends State<MyOrderDetail> {
   }
 
   Align textbillingaddres() {
-    return const Align(
+    return Align(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: EdgeInsets.all(10.0),
-        child: Text(
+        padding: EdgeInsets.all(context.dynamicHeight(0.01)),
+        child: const Text(
           "Billing Address",
           style: TextStyle(
             fontWeight: FontWeight.w600,
             fontSize: 16,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
             color: Color(0xFF232F3E),
           ),
         ),

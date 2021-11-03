@@ -17,6 +17,9 @@ class _CartAppState extends State<CartApp> {
   String choose = "";
   String choosee = "";
 
+  int _itemCount = 0;
+  int _itemCount2 = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +60,7 @@ class _CartAppState extends State<CartApp> {
                 height: context.dynamicHeight(0.02),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 15),
+                padding: EdgeInsets.only(right: context.dynamicHeight(0.02)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -120,7 +123,7 @@ class _CartAppState extends State<CartApp> {
               ),
               buildSizedBoxConfirmButton(),
               SizedBox(
-                height: context.dynamicHeight(0.03),
+                height: context.dynamicHeight(0.1),
               ),
             ],
           ),
@@ -132,31 +135,39 @@ class _CartAppState extends State<CartApp> {
   SizedBox buildSizedBoxConfirmButton() {
     return SizedBox(
       height: 35,
-      width: 300,
-      child: RaisedButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
+      width: double.infinity,
+      child: Padding(
+        padding: EdgeInsets.only(
+          left: context.dynamicHeight(0.02),
+          right: context.dynamicHeight(0.02),
         ),
-        color: const Color(0xFFEF3C4C),
-        child: Builder(builder: (context) {
-          return const Text(
-            "Confirm Order",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-              fontSize: 14,
-              fontFamily: 'Poppins-Bold.ttf',
-            ),
-          );
-        }),
+        child: RaisedButton(
+          onPressed: () {},
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          color: const Color(0xFFEF3C4C),
+          child: Builder(builder: (context) {
+            return const Text(
+              "Confirm Order",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 14,
+                fontFamily: 'Poppins',
+              ),
+            );
+          }),
+        ),
       ),
     );
   }
 
   Padding buildPaddingTotal() {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15),
+      padding: EdgeInsets.only(
+          right: context.dynamicHeight(0.02),
+          left: context.dynamicHeight(0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -170,8 +181,8 @@ class _CartAppState extends State<CartApp> {
             "\$2100",
             style: TextStyle(
               fontSize: 36,
-              fontWeight: FontWeight.w600,
-              fontFamily: 'Poppins-Bold.ttf',
+              fontWeight: FontWeight.w700,
+              fontFamily: 'Poppins',
             ),
           ),
         ],
@@ -181,7 +192,9 @@ class _CartAppState extends State<CartApp> {
 
   Padding buildPaddingTaxes() {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15),
+      padding: EdgeInsets.only(
+          right: context.dynamicHeight(0.02),
+          left: context.dynamicHeight(0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -196,7 +209,7 @@ class _CartAppState extends State<CartApp> {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,
-              fontFamily: 'Poppins-Regular.ttf',
+              fontFamily: 'Poppins',
             ),
           ),
         ],
@@ -206,7 +219,9 @@ class _CartAppState extends State<CartApp> {
 
   Padding buildPaddingShipping() {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15),
+      padding: EdgeInsets.only(
+          right: context.dynamicHeight(0.02),
+          left: context.dynamicHeight(0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -221,7 +236,7 @@ class _CartAppState extends State<CartApp> {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,
-              fontFamily: 'Poppins-Regular.ttf',
+              fontFamily: 'Poppins',
             ),
           ),
         ],
@@ -231,7 +246,9 @@ class _CartAppState extends State<CartApp> {
 
   Padding buildPaddingSubTotal() {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15),
+      padding: EdgeInsets.only(
+          right: context.dynamicHeight(0.02),
+          left: context.dynamicHeight(0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -246,7 +263,7 @@ class _CartAppState extends State<CartApp> {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,
-              fontFamily: 'Poppins-Regular.ttf',
+              fontFamily: 'Poppins',
             ),
           ),
         ],
@@ -256,7 +273,9 @@ class _CartAppState extends State<CartApp> {
 
   Padding buildPaddingTextVacummCleanerPrice() {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15),
+      padding: EdgeInsets.only(
+          right: context.dynamicHeight(0.02),
+          left: context.dynamicHeight(0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -276,7 +295,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 14,
-                    fontFamily: 'Poppins-Regular',
+                    fontFamily: 'Poppins',
                     color: Color(0xFF9496A4),
                   ),
                 ),
@@ -288,7 +307,7 @@ class _CartAppState extends State<CartApp> {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,
-              fontFamily: 'Poppins-Regular.ttf',
+              fontFamily: 'Poppins',
             ),
           ),
         ],
@@ -298,7 +317,9 @@ class _CartAppState extends State<CartApp> {
 
   Padding buildPaddingTextCanonCameraPrice() {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, left: 15),
+      padding: EdgeInsets.only(
+          right: context.dynamicHeight(0.02),
+          left: context.dynamicHeight(0.02)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -318,7 +339,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontWeight: FontWeight.w400,
                     fontSize: 14,
-                    fontFamily: 'Poppins-Regular',
+                    fontFamily: 'Poppins',
                     color: Color(0xFF9496A4),
                   ),
                 ),
@@ -330,7 +351,7 @@ class _CartAppState extends State<CartApp> {
             style: TextStyle(
               fontWeight: FontWeight.w400,
               fontSize: 18,
-              fontFamily: 'Poppins-Regular.ttf',
+              fontFamily: 'Poppins',
             ),
           ),
         ],
@@ -347,22 +368,21 @@ class _CartAppState extends State<CartApp> {
       ),
       height: 35,
       width: 200,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
+            borderSide: BorderSide(width: 1.0, color: Color(0xFFDFB73E)),
           ),
           hintText: "Discount Code",
-          hintStyle: TextStyle(
-              fontFamily: "Poppins-Regular.ttf",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Poppins", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFDFB73E), width: 1.0),
           ),
@@ -388,7 +408,7 @@ class _CartAppState extends State<CartApp> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold.ttf',
+              fontFamily: 'Poppins',
             ),
           );
         }),
@@ -403,7 +423,7 @@ class _CartAppState extends State<CartApp> {
       ),
       child: Material(
         color: Colors.white,
-        elevation: 1,
+        elevation: 2.5,
         child: Padding(
           padding: EdgeInsets.only(
             left: context.dynamicHeight(0.06),
@@ -433,13 +453,25 @@ class _CartAppState extends State<CartApp> {
                   "Standard Cargo",
                   style: kBlackBold,
                 ),
-                subtitle: const Text(
-                  "Delivery Date 22 Feb 2021",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'Poppins-Regular',
-                  ),
+                subtitle: Row(
+                  children: [
+                    Text(
+                      "Delivery Date ",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                    Text(
+                      "22 Feb 2021",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ],
                 ),
                 secondary: const Text(
                   "\$50",
@@ -460,13 +492,25 @@ class _CartAppState extends State<CartApp> {
                   "Fast Cargo",
                   style: kBlackBold,
                 ),
-                subtitle: const Text(
-                  "Delivery Date 22 Feb 2021",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'Poppins-Regular',
-                  ),
+                subtitle: Row(
+                  children: [
+                    Text(
+                      "Delivery Date ",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                    Text(
+                      "22 Feb 2021",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ],
                 ),
                 secondary: GestureDetector(
                   onTap: () {},
@@ -497,7 +541,7 @@ class _CartAppState extends State<CartApp> {
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
-                fontFamily: "Poppins-SemiBold",
+                fontFamily: "Poppins",
               ),
             );
           }),
@@ -530,18 +574,7 @@ class _CartAppState extends State<CartApp> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Align(
-                alignment: Alignment.topLeft,
-                child: Text(
-                  "Camera",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: "Poppins-Regular",
-                  ),
-                ),
-              ),
-              SizedBox(height: context.dynamicHeight(0.01)),
+              SizedBox(height: context.dynamicHeight(0.03)),
               const Align(
                 alignment: Alignment.topLeft,
                 child: Text(
@@ -549,7 +582,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    fontFamily: "Poppins-SemiBold",
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
@@ -581,7 +614,7 @@ class _CartAppState extends State<CartApp> {
         Padding(
           padding: EdgeInsets.only(top: context.dynamicHeight(0.03)),
           child: IconButton(
-              onPressed: () {},
+              onPressed: () => setState(() => _itemCount--),
               icon: const Icon(
                 Icons.remove,
                 color: Color(0xFF9496A4),
@@ -592,13 +625,13 @@ class _CartAppState extends State<CartApp> {
         ),
         Padding(
           padding: EdgeInsets.only(top: context.dynamicHeight(0.03)),
-          child: const Align(
+          child: Align(
             child: Text(
-              "5",
-              style: TextStyle(
+              "$_itemCount",
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                fontFamily: "Poppins-Regular",
+                fontFamily: "Poppins",
               ),
             ),
           ),
@@ -609,7 +642,7 @@ class _CartAppState extends State<CartApp> {
         Padding(
           padding: EdgeInsets.only(top: context.dynamicHeight(0.03)),
           child: IconButton(
-              onPressed: () {},
+              onPressed: () => setState(() => _itemCount++),
               icon: const Icon(
                 Icons.add,
                 color: Color(0xFF9496A4),
@@ -661,7 +694,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w400,
-                    fontFamily: "Poppins-Regular",
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
@@ -673,7 +706,7 @@ class _CartAppState extends State<CartApp> {
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
-                    fontFamily: "Poppins-SemiBold",
+                    fontFamily: "Poppins",
                   ),
                 ),
               ),
@@ -705,7 +738,7 @@ class _CartAppState extends State<CartApp> {
         Padding(
           padding: EdgeInsets.only(top: context.dynamicHeight(0.03)),
           child: IconButton(
-              onPressed: () {},
+              onPressed: () => setState(() => _itemCount2--),
               icon: const Icon(
                 Icons.remove,
                 color: Color(0xFF9496A4),
@@ -716,13 +749,13 @@ class _CartAppState extends State<CartApp> {
         ),
         Padding(
           padding: EdgeInsets.only(top: context.dynamicHeight(0.03)),
-          child: const Align(
+          child: Align(
             child: Text(
-              "2",
-              style: TextStyle(
+              "$_itemCount2",
+              style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w400,
-                fontFamily: "Poppins-Regular",
+                fontFamily: "Poppins",
               ),
             ),
           ),
@@ -733,7 +766,7 @@ class _CartAppState extends State<CartApp> {
         Padding(
           padding: EdgeInsets.only(top: context.dynamicHeight(0.03)),
           child: IconButton(
-              onPressed: () {},
+              onPressed: () => setState(() => _itemCount2++),
               icon: const Icon(
                 Icons.add,
                 color: Color(0xFF9496A4),
@@ -750,7 +783,7 @@ class _CartAppState extends State<CartApp> {
       ),
       child: Material(
         color: Colors.white,
-        elevation: 1,
+        elevation: 2.5,
         child: Padding(
           padding: EdgeInsets.only(
             left: context.dynamicHeight(0.06),
@@ -780,13 +813,25 @@ class _CartAppState extends State<CartApp> {
                   "Standard Cargo",
                   style: kBlackBold,
                 ),
-                subtitle: const Text(
-                  "Delivery Date 22 Feb 2021",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'Poppins-Regular',
-                  ),
+                subtitle: Row(
+                  children: [
+                    const Text(
+                      "Delivery Date ",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                    Text(
+                      "22 Feb 2021",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ],
                 ),
                 secondary: const Text(
                   "\$50",
@@ -807,13 +852,25 @@ class _CartAppState extends State<CartApp> {
                   "Fast Cargo",
                   style: kBlackBold,
                 ),
-                subtitle: const Text(
-                  "Delivery Date 22 Feb 2021",
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: 'Poppins-Regular',
-                  ),
+                subtitle: Row(
+                  children: [
+                    const Text(
+                      "Delivery Date ",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                    Text(
+                      "22 Feb 2021",
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        fontFamily: 'Poppins',
+                      ),
+                    ),
+                  ],
                 ),
                 secondary: GestureDetector(
                   onTap: () {},

@@ -73,7 +73,7 @@ class _MyOrderState extends State<MyOrder> {
                               color: Colors.orange,
                               fontWeight: FontWeight.w600,
                               fontSize: 14,
-                              fontFamily: 'Poppins-SemiBold',
+                              fontFamily: 'Poppins',
                             ),
                           );
                         }),
@@ -89,7 +89,7 @@ class _MyOrderState extends State<MyOrder> {
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.w400,
-                                fontFamily: 'Poppins-Regular',
+                                fontFamily: 'Poppins',
                               ),
                             );
                           }),
@@ -117,7 +117,7 @@ class _MyOrderState extends State<MyOrder> {
                               "Delivery Adress",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins-Regular',
+                                fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w400,
                               ),
                             );
@@ -129,7 +129,7 @@ class _MyOrderState extends State<MyOrder> {
                             "Home",
                             style: TextStyle(
                               fontSize: 14,
-                              fontFamily: 'Poppins-SemiBold',
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
                               color: Color(0xFFFAD61A),
                             ),
@@ -146,7 +146,7 @@ class _MyOrderState extends State<MyOrder> {
                               "Total Price",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins-Regular',
+                                fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w400,
                               ),
                             );
@@ -158,7 +158,7 @@ class _MyOrderState extends State<MyOrder> {
                             "\$2050",
                             style: TextStyle(
                               fontSize: 14,
-                              fontFamily: 'Poppins-SemiBold',
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -174,7 +174,7 @@ class _MyOrderState extends State<MyOrder> {
                               "Order Date",
                               style: TextStyle(
                                 fontSize: 10,
-                                fontFamily: 'Poppins-Regular',
+                                fontFamily: 'Poppins',
                                 fontWeight: FontWeight.w400,
                               ),
                             );
@@ -186,7 +186,7 @@ class _MyOrderState extends State<MyOrder> {
                             "12 Feb 2021",
                             style: TextStyle(
                               fontSize: 14,
-                              fontFamily: 'Poppins-SemiBold',
+                              fontFamily: 'Poppins',
                               fontWeight: FontWeight.w600,
                               color: Color(0xFFFA931A),
                             ),
@@ -216,7 +216,7 @@ class _MyOrderState extends State<MyOrder> {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
           ),
         ),
       ),

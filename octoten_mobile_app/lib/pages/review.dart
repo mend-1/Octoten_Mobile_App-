@@ -33,6 +33,9 @@ class _ReviewState extends State<Review> {
                 height: context.dynamicHeight(0.02),
               ),
               buildPadding2(context),
+              SizedBox(
+                height: context.dynamicHeight(0.05),
+              ),
             ],
           ),
         ],
@@ -47,7 +50,7 @@ class _ReviewState extends State<Review> {
       ),
       child: Material(
         color: Colors.white,
-        elevation: 1,
+        elevation: 2.5,
         child: Padding(
           padding: EdgeInsets.all(context.dynamicHeight(0.02)),
           child: Column(
@@ -118,10 +121,10 @@ class _ReviewState extends State<Review> {
               ),
               const Text(
                   "Lorem ipsum dolor sit amet, consectetur\n"
-                  " adipiscing elit. Et porttitor ipsum bibendum\n"
-                  " amet arcu, tortor. Vel non purus felis curabitur.\n"
-                  " Consequat, dolor mi varius sit. Semper nis\n"
-                  " lpharetra, proin sit non aenean purus",
+                  "adipiscing elit. Et porttitor ipsum bibendum\n"
+                  "amet arcu, tortor. Vel non purus felis curabitur.\n"
+                  "Consequat, dolor mi varius sit. Semper nis\n"
+                  "lpharetra, proin sit non aenean purus",
                   style: kBlackNormal),
               SizedBox(
                 height: context.dynamicHeight(0.03),
@@ -140,7 +143,7 @@ class _ReviewState extends State<Review> {
               ),
               const Text("Status",
                   style: TextStyle(
-                    fontFamily: 'Poppins-Regular',
+                    fontFamily: 'Poppins',
                     color: Colors.black,
                     fontWeight: FontWeight.w400,
                     fontSize: 10,
@@ -160,7 +163,7 @@ class _ReviewState extends State<Review> {
       ),
       child: Material(
         color: Colors.white,
-        elevation: 1,
+        elevation: 2.5,
         child: Padding(
           padding: EdgeInsets.all(context.dynamicHeight(0.02)),
           child: Column(
@@ -231,10 +234,10 @@ class _ReviewState extends State<Review> {
               ),
               const Text(
                   "Lorem ipsum dolor sit amet, consectetur\n"
-                  " adipiscing elit. Et porttitor ipsum bibendum\n"
-                  " amet arcu, tortor. Vel non purus felis curabitur.\n"
-                  " Consequat, dolor mi varius sit. Semper nis\n"
-                  " lpharetra, proin sit non aenean purus",
+                  "adipiscing elit. Et porttitor ipsum bibendum\n"
+                  "amet arcu, tortor. Vel non purus felis curabitur.\n"
+                  "Consequat, dolor mi varius sit. Semper nis\n"
+                  "lpharetra, proin sit non aenean purus",
                   style: kBlackNormal),
               SizedBox(
                 height: context.dynamicHeight(0.03),
@@ -253,7 +256,7 @@ class _ReviewState extends State<Review> {
               ),
               const Text("Status",
                   style: TextStyle(
-                    fontFamily: 'Poppins-Regular.ttf',
+                    fontFamily: 'Poppins',
                     color: Colors.black,
                     fontWeight: FontWeight.w400,
                     fontSize: 10,
@@ -263,9 +266,9 @@ class _ReviewState extends State<Review> {
                 height: context.dynamicHeight(0.02),
               ),
               const Text(
-                "Your comments have been rejected because there are too many\n slang words in them.",
+                "Your comments have been rejected because there are too many\nslang words in them.",
                 style: TextStyle(
-                  fontFamily: 'Poppins-Regular.ttf',
+                  fontFamily: 'Poppins',
                   color: Colors.black,
                   fontWeight: FontWeight.w400,
                   fontSize: 10,

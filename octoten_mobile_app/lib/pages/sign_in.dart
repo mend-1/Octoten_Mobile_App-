@@ -130,7 +130,7 @@ class _Sign_InState extends State<Sign_In> {
           Builder(builder: (context) {
             return const Text("Sign In",
                 style: TextStyle(
-                  fontFamily: 'Poppins-SemiBold',
+                  fontFamily: 'Poppins',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -166,7 +166,7 @@ class _Sign_InState extends State<Sign_In> {
             const Text(
               "Sign In With Apple",
               style: TextStyle(
-                fontFamily: 'Poppins-Regular',
+                fontFamily: 'Poppins',
                 color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -203,7 +203,7 @@ class _Sign_InState extends State<Sign_In> {
             const Text(
               "Sign In With Google",
               style: TextStyle(
-                fontFamily: 'Poppins-Regular',
+                fontFamily: 'Poppins',
                 color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -240,7 +240,7 @@ class _Sign_InState extends State<Sign_In> {
             const Text(
               "Sign In With Facebook",
               style: TextStyle(
-                fontFamily: 'Poppins-Regular',
+                fontFamily: 'Poppins',
                 color: Color(0xFF9496A4),
                 fontWeight: FontWeight.w400,
                 fontSize: 14,
@@ -260,7 +260,7 @@ class _Sign_InState extends State<Sign_In> {
           Builder(builder: (context) {
             return const Text("Or",
                 style: TextStyle(
-                  fontFamily: 'Poppins-SemiBold',
+                  fontFamily: 'Poppins',
                   color: Colors.black,
                   fontWeight: FontWeight.w600,
                   fontSize: 24,
@@ -276,25 +276,26 @@ class _Sign_InState extends State<Sign_In> {
       margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
       height: 35,
       width: double.infinity,
-      child: const TextField(
-        style: TextStyle(
+      child: TextField(
+        style: const TextStyle(
           fontSize: 14.0,
           height: 1.0,
         ),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1, color: Color(0xFFFA931A)),
           ),
           hintText: "Email Address or Mobile Phone",
-          hintStyle: TextStyle(
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -318,10 +319,11 @@ class _Sign_InState extends State<Sign_In> {
             borderSide: BorderSide(width: 2.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Password",
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
           hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
@@ -359,7 +361,7 @@ class _Sign_InState extends State<Sign_In> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'OpenSans-Bold',
+              fontFamily: 'OpenSans',
             ),
           );
         }),

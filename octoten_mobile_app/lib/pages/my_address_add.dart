@@ -70,7 +70,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           style: TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.w600,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -86,23 +86,24 @@ class _MyAddressAddState extends State<MyAddressAdd> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Address Name",
-          hintStyle: TextStyle(
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -120,23 +121,24 @@ class _MyAddressAddState extends State<MyAddressAdd> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
-        style: TextStyle(fontSize: 14.0, height: 1.0),
+        style: const TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "Your Name",
-          hintStyle: TextStyle(
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
             fontSize: 14,
             color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
           ),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -154,22 +156,21 @@ class _MyAddressAddState extends State<MyAddressAdd> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
         style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "City",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -187,22 +188,21 @@ class _MyAddressAddState extends State<MyAddressAdd> {
       ),
       height: 35,
       width: double.infinity,
-      child: const TextField(
+      child: TextField(
         textAlignVertical: TextAlignVertical.center,
         style: TextStyle(fontSize: 14.0, height: 1.0),
         decoration: InputDecoration(
-          border: OutlineInputBorder(
+          border: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(width: 1.0, color: Color(0xFFFA931A)),
           ),
           hintText: "District",
-          hintStyle: TextStyle(
-              fontFamily: "Roboto-Regular",
-              fontSize: 14,
-              color: Color(0xFFB3B1B1)),
+          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
+          hintStyle: const TextStyle(
+              fontFamily: "Roboto", fontSize: 14, color: Color(0xFFB3B1B1)),
           fillColor: Colors.white,
           filled: true,
-          enabledBorder: OutlineInputBorder(
+          enabledBorder: const OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(10)),
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
@@ -225,7 +225,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
           ),
           hintText: "Full Address",
           hintStyle: TextStyle(
-            fontFamily: "Roboto-Regular",
+            fontFamily: "Roboto",
             fontSize: 14,
             color: Color(0xFFB3B1B1),
           ),
@@ -257,7 +257,7 @@ class _MyAddressAddState extends State<MyAddressAdd> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins',
             ),
           );
         }),

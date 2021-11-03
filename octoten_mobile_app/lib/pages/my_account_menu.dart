@@ -68,7 +68,7 @@ class _MyAccountState extends State<MyAccount> {
                     return const Text(
                       "Sign out",
                       style: TextStyle(
-                        fontFamily: "Poppins-Bold",
+                        fontFamily: "Poppins",
                         color: Color(0xFFFA931A),
                         fontWeight: FontWeight.w700,
                         fontSize: 14,
@@ -107,7 +107,7 @@ class _MyAccountState extends State<MyAccount> {
                   child: const Text(
                     "My Messages",
                     style: TextStyle(
-                      fontFamily: "Poppins-SemiBold",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
@@ -150,7 +150,7 @@ class _MyAccountState extends State<MyAccount> {
                   child: const Text(
                     "My Returns",
                     style: TextStyle(
-                      fontFamily: "Poppins-SemiBold",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
@@ -194,7 +194,7 @@ class _MyAccountState extends State<MyAccount> {
                   child: const Text(
                     "My Credit Cards",
                     style: TextStyle(
-                      fontFamily: "Poppins-SemiBold",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
@@ -238,7 +238,7 @@ class _MyAccountState extends State<MyAccount> {
                   child: const Text(
                     "My Address",
                     style: TextStyle(
-                      fontFamily: "Poppins-SemiBold",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
@@ -282,7 +282,7 @@ class _MyAccountState extends State<MyAccount> {
                   child: const Text(
                     "My information",
                     style: TextStyle(
-                      fontFamily: "Poppins-SemiBold",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,
@@ -325,7 +325,7 @@ class _MyAccountState extends State<MyAccount> {
                   child: const Text(
                     "My Order",
                     style: TextStyle(
-                      fontFamily: "Poppins-SemiBold",
+                      fontFamily: "Poppins",
                       fontSize: 14,
                       color: Color(0xFF9496A4),
                       fontWeight: FontWeight.w600,

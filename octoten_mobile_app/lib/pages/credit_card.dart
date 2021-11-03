@@ -25,7 +25,7 @@ class _CreditCardState extends State<CreditCard> {
       body: ListView(
         padding: EdgeInsets.symmetric(
             vertical: context.dynamicHeight(0.03),
-            horizontal: context.dynamicWidth(0.02)),
+            horizontal: context.dynamicWidth(0.03)),
         children: [
           buildRowText(),
           SizedBox(

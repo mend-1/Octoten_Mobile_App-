@@ -71,7 +71,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.w700,
-            fontFamily: 'Poppins-SemiBold',
+            fontFamily: 'Poppins',
           ),
         ),
       ),
@@ -90,7 +90,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w400,
-            fontFamily: 'Poppins-Regular',
+            fontFamily: 'Poppins',
             color: Color(0xFF232F3E),
           ),
         ),
@@ -115,7 +115,7 @@ class _CartAppEmptyState extends State<CartAppEmpty> {
               color: Colors.white,
               fontWeight: FontWeight.w700,
               fontSize: 14,
-              fontFamily: 'Poppins-Bold',
+              fontFamily: 'Poppins',
             ),
           );
         }),
