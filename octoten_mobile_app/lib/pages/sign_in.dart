@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:octoten_mobile_app/custom_components/custom_sign_button.dart';
+import 'package:octoten_mobile_app/custom_components/custom_textfield.dart';
 import 'package:octoten_mobile_app/model/constants.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/pages/sign_up.dart';
@@ -35,15 +37,27 @@ class _Sign_InState extends State<Sign_In> {
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildSizedBoxApple(context),
+              CustomSignButton(
+                text: "Sign in With Apple",
+                image:
+                    const Image(image: AssetImage("assets/images/apple.png")),
+              ),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildSizedBoxGoogle(context),
+              CustomSignButton(
+                text: "Sign in With Google",
+                image:
+                    const Image(image: AssetImage("assets/images/google.png")),
+              ),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildSizedBoxFacebook(context),
+              CustomSignButton(
+                text: "Sign in With Facebook",
+                image: const Image(
+                    image: AssetImage("assets/images/facebook.png")),
+              ),
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
@@ -51,7 +65,10 @@ class _Sign_InState extends State<Sign_In> {
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              buildContainerEmail(context),
+              CustomTextField(
+                text: "Email Address or Mobile Phone",
+                width: double.infinity,
+              ),
               SizedBox(
                 height: context.dynamicHeight(0.01),
               ),
@@ -141,117 +158,6 @@ class _Sign_InState extends State<Sign_In> {
     );
   }
 
-  SizedBox buildSizedBoxApple(BuildContext context) {
-    return SizedBox(
-      height: 35,
-      width: double.infinity,
-      child: RaisedButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        color: Colors.grey.shade300,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: context.dynamicHeight(0.04),
-              child: const Image(
-                image: AssetImage("assets/images/apple.png"),
-              ),
-            ),
-            SizedBox(
-              width: context.dynamicWidth(0.02),
-            ),
-            const Text(
-              "Sign In With Apple",
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Color(0xFF9496A4),
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  SizedBox buildSizedBoxGoogle(BuildContext context) {
-    return SizedBox(
-      height: 35,
-      width: double.infinity,
-      child: RaisedButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        color: Colors.grey.shade300,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: context.dynamicHeight(0.036),
-              child: const Image(
-                image: AssetImage("assets/images/google.png"),
-              ),
-            ),
-            SizedBox(
-              width: context.dynamicWidth(0.02),
-            ),
-            const Text(
-              "Sign In With Google",
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Color(0xFF9496A4),
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  SizedBox buildSizedBoxFacebook(BuildContext context) {
-    return SizedBox(
-      height: 35,
-      width: double.infinity,
-      child: RaisedButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        color: Colors.grey.shade300,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              height: context.dynamicHeight(0.04),
-              child: const Image(
-                image: AssetImage("assets/images/facebook.png"),
-              ),
-            ),
-            SizedBox(
-              width: context.dynamicWidth(0.02),
-            ),
-            const Text(
-              "Sign In With Facebook",
-              style: TextStyle(
-                fontFamily: 'Poppins',
-                color: Color(0xFF9496A4),
-                fontWeight: FontWeight.w400,
-                fontSize: 14,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   Align buildAlignTextOr(BuildContext context) {
     return Align(
       child: Column(
@@ -267,39 +173,6 @@ class _Sign_InState extends State<Sign_In> {
                 ));
           }),
         ],
-      ),
-    );
-  }
-
-  Container buildContainerEmail(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(top: context.dynamicHeight(0.01)),
-      height: 35,
-      width: double.infinity,
-      child: TextField(
-        style: const TextStyle(
-          fontSize: 14.0,
-          height: 1.0,
-        ),
-        decoration: InputDecoration(
-          border: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(width: 1, color: Color(0xFFFA931A)),
-          ),
-          hintText: "Email Address or Mobile Phone",
-          contentPadding: EdgeInsets.only(left: context.dynamicHeight(0.015)),
-          hintStyle: const TextStyle(
-            fontSize: 14,
-            color: Color(0xFFB3B1B1),
-            fontFamily: "Roboto",
-          ),
-          fillColor: Colors.white,
-          filled: true,
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(10)),
-            borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
-          ),
-        ),
       ),
     );
   }

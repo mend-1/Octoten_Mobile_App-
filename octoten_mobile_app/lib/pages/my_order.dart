@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/custom_components/custom_text.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
 
 import '../model/constants.dart';
@@ -26,7 +27,9 @@ class _MyOrderState extends State<MyOrder> {
         children: [
           Column(
             children: [
-              buildPaddingText(),
+              CustomText(
+                text: "My Order",
+              ),
               buildGestureDetector(context),
               SizedBox(
                 height: context.dynamicHeight(0.01),
@@ -198,25 +201,6 @@ class _MyOrderState extends State<MyOrder> {
                 ),
               ],
             ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Padding buildPaddingText() {
-    return Padding(
-      padding: EdgeInsets.all(
-        context.dynamicHeight(0.02),
-      ),
-      child: const Align(
-        alignment: Alignment.topLeft,
-        child: Text(
-          "My Order",
-          style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
-            fontFamily: 'Poppins',
           ),
         ),
       ),

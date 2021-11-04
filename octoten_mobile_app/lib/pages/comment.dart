@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:octoten_mobile_app/core/custom_appbar.dart';
+import 'package:octoten_mobile_app/custom_components/custom_button_save_submit.dart';
 import 'package:octoten_mobile_app/model/constants.dart';
 import 'package:octoten_mobile_app/model/context_extensions.dart';
 import 'package:octoten_mobile_app/model/rating.dart';
@@ -55,7 +56,10 @@ class _CommentState extends State<Comment> {
               SizedBox(
                 height: context.dynamicHeight(0.02),
               ),
-              submit(),
+              CustomSaveSubmitButton(
+                text: "Submit",
+                width: 170,
+              ),
             ],
           ),
         ],
@@ -156,31 +160,6 @@ class _CommentState extends State<Comment> {
             borderSide: BorderSide(color: Color(0xFFFA931A), width: 1.0),
           ),
         ),
-      ),
-    );
-  }
-
-  SizedBox submit() {
-    return SizedBox(
-      height: 35,
-      width: 170,
-      child: RaisedButton(
-        onPressed: () {},
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10),
-        ),
-        color: const Color(0xFFFA931A),
-        child: Builder(builder: (context) {
-          return const Text(
-            "Submit",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.w700,
-              fontSize: 14,
-              fontFamily: 'Poppins',
-            ),
-          );
-        }),
       ),
     );
   }

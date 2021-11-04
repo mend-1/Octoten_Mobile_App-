@@ -545,7 +545,8 @@ class _CartAppState extends State<CartApp> {
               ),
             );
           }),
-          const Text("Empty Cart", style: kRedNormal),
+          GestureDetector(
+              onTap: () {}, child: const Text("Empty Cart", style: kRedNormal)),
         ],
       ),
     );
